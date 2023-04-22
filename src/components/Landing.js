@@ -1,11 +1,13 @@
 import '../styles/Landing.scss';
 import { useState } from 'react';
 import LandingPreview from './LandingPreview';
+import Options from './Options';
 
 const Landing = () => {
   const [protein, setProtein] = useState('');
   const [arrayProtein, setArrayProtein] = useState([]);
   const [proteinName, setProteinName] = useState('');
+  const [structure, setStructure] = useState('oval');
 
   const handleWriteProtein = (ev) => {
     setProtein(ev.target.value);
@@ -18,6 +20,10 @@ const Landing = () => {
 
   const saveProtName = (ev) => {
     setProteinName(ev.target.value);
+  };
+
+  const selectStructure = (ev) => {
+    setStructure(ev.target.value);
   };
 
   return (
@@ -38,6 +44,7 @@ const Landing = () => {
           onChange={saveProtName}
           value={proteinName}
         />
+        <Options selectStructure={selectStructure}></Options>
       </form>
       <button className="button" onClick={paintProtein}>
         Frikear
@@ -46,6 +53,7 @@ const Landing = () => {
         <LandingPreview
           arrayProtein={arrayProtein}
           proteinName={proteinName}
+          structure={structure}
         ></LandingPreview>
       </section>
     </>

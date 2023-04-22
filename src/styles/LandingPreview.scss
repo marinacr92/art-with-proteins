@@ -4,10 +4,27 @@
     list-style: none;
 }
 
-.structure {
+.oval-structure {
     width: 20px;
     height: 30px;
-    border-radius: 50%;    
+    border-radius: 50%;
+}
+
+.sfere-structure {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.square-structure {
+    width: 30px;
+    height: 30px;
+}
+
+.semi-square-structure {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
 }
 
 .a{
