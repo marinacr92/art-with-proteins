@@ -2,12 +2,14 @@ import '../styles/Landing.scss';
 import { useState } from 'react';
 import LandingPreview from './LandingPreview';
 import Options from './Options';
+import Gaps from './Gaps';
 
 const Landing = () => {
   const [protein, setProtein] = useState('');
   const [arrayProtein, setArrayProtein] = useState([]);
   const [proteinName, setProteinName] = useState('');
   const [structure, setStructure] = useState('oval');
+  const [gaps, setGaps] = useState('no-gap');
 
   const handleWriteProtein = (ev) => {
     setProtein(ev.target.value);
@@ -45,6 +47,7 @@ const Landing = () => {
           value={proteinName}
         />
         <Options selectStructure={selectStructure}></Options>
+        <Gaps setGaps={setGaps} gaps={gaps}></Gaps>
       </form>
       <button className="button" onClick={paintProtein}>
         Frikear
@@ -54,6 +57,7 @@ const Landing = () => {
           arrayProtein={arrayProtein}
           proteinName={proteinName}
           structure={structure}
+          gaps={gaps}
         ></LandingPreview>
       </section>
     </>

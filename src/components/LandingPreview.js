@@ -1,8 +1,13 @@
 import '../styles/LandingPreview.scss';
 
-const LandingPreview = ({ arrayProtein, proteinName, structure }) => {
+const LandingPreview = ({ arrayProtein, proteinName, structure, gaps }) => {
   const aminoacid = arrayProtein.map((eachAA, index) => {
-    return <li key={index} className={`${structure}-structure ${eachAA}`}></li>;
+    return (
+      <li
+        key={index}
+        className={`${structure}-structure ${eachAA} ${gaps}`}
+      ></li>
+    );
   });
 
   return (
