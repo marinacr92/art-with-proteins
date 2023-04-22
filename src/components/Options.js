@@ -29,6 +29,13 @@ const Options = ({ selectStructure }) => {
         onChange={selectStructure}
       />
       <label>Cuadrada-redondeada</label>
+      <input
+        type="radio"
+        name="structure"
+        value="triangle"
+        onChange={selectStructure}
+      />
+      <label>Triángulo</label>
     </>
   );
 };

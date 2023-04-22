@@ -27,6 +27,14 @@
     border-radius: 8px;
 }
 
+.triangle-structure{
+    width: 0;
+    height: 0;
+    border-left: 20px solid white;
+    border-right: 20px solid white;
+    border-bottom: 30px solid transparent;
+}
+
 .no-gap {
     margin: 0;
 }
@@ -115,5 +123,10 @@
 
 .v {
     background-color: rgb(248, 215, 80);
+}
+
+.A4{
+    width: 248px;
+    height: 350px;
 }
 
