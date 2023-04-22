@@ -1,0 +1,29 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-label{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+    &-textarea{
+        height: 200px;
+        width: 500px;
+        border-radius: 10px;
+    }
+
+    &-input{
+        height: 20px;
+        border-radius: 8px;
+    }
+}
+
+.button{
+    height: 30px;
+    width: 80px;
+    font-size: 15px;
+    
+}
