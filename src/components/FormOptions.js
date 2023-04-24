@@ -1,6 +1,9 @@
-const Options = ({ selectStructure }) => {
+const FormOptions = ({ selectStructure }) => {
   return (
-    <>
+    <fieldset className="fieldset form-options">
+      <legend className="legend">
+        <h2 className="legend-title">Elige la forma</h2>
+      </legend>
       <input
         type="radio"
         name="structure"
@@ -36,8 +39,8 @@ const Options = ({ selectStructure }) => {
         onChange={selectStructure}
       />
       <label>Triángulo</label>
-    </>
+    </fieldset>
   );
 };
 
-export default Options;
+export default FormOptions;
