@@ -1,4 +1,4 @@
-const GapsOptions = ({ gaps, setGaps }) => {
+const GapsOptions = ({ setGaps }) => {
   const selectGaps = (ev) => {
     setGaps(ev.target.value);
   };
@@ -8,11 +8,38 @@ const GapsOptions = ({ gaps, setGaps }) => {
       <legend className="legend">
         <h2 className="legend-title">Elige la distribución</h2>
       </legend>
-      <select name="" id="" onChange={selectGaps} value={gaps}>
-        <option value="no-gap">Sin huecos</option>
-        <option value="full-gap">Huecos entre todos aa</option>
-        <option value="group-and-gap">Huecos cada 4 aa</option>
-      </select>
+      <div className="radio-group">
+        <label className="form-label">
+          <input
+            type="radio"
+            name="gaps"
+            className="input-radio"
+            value="no-gap"
+            onChange={selectGaps}
+          />
+          Sin huecos
+        </label>
+        <label className="form-label">
+          <input
+            type="radio"
+            name="gaps"
+            className="input-radio"
+            value="full-gap"
+            onChange={selectGaps}
+          />
+          Huecos entre todos aa
+        </label>
+        <label className="form-label">
+          <input
+            type="radio"
+            name="gaps"
+            className="input-radio"
+            value="group-and-gap"
+            onChange={selectGaps}
+          />
+          Agrupar cada 5 aa
+        </label>
+      </div>
     </fieldset>
   );
 };

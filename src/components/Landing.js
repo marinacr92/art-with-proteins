@@ -3,7 +3,7 @@ import { useState } from 'react';
 import LandingPreview from './LandingPreview';
 import FormOptions from './FormOptions';
 import GapsOptions from './GapsOptions';
-import SizeToPrint from './SizeToPrint';
+//import SizeToPrint from './SizeToPrint';
 import Header from './Header';
 import InfoProt from './InfoProt';
 
@@ -13,7 +13,7 @@ const Landing = () => {
   const [proteinName, setProteinName] = useState('');
   const [structure, setStructure] = useState('oval');
   const [gaps, setGaps] = useState('no-gap');
-  const [size, setSize] = useState('A4');
+  //const [size, setSize] = useState('A4');
 
   const handleWriteProtein = (ev) => {
     setProteinSequence(ev.target.value);
@@ -32,14 +32,14 @@ const Landing = () => {
     setStructure(ev.target.value);
   };
 
-  const selectSizeToPrint = (ev) => {
-    setSize(ev.target.value);
-  };
+  // const selectSizeToPrint = (ev) => {
+  //   setSize(ev.target.value);
+  // };
 
   return (
     <>
       <Header></Header>
-      <main>
+      <main className="main">
         <form className="form">
           <InfoProt
             handleWriteProtein={handleWriteProtein}
@@ -48,16 +48,16 @@ const Landing = () => {
             saveProtName={saveProtName}
           ></InfoProt>
           <FormOptions selectStructure={selectStructure}></FormOptions>
-          <GapsOptions setGaps={setGaps} gaps={gaps}></GapsOptions>
-          <SizeToPrint
+          <GapsOptions setGaps={setGaps}></GapsOptions>
+          {/* <SizeToPrint
             selectSizeToPrint={selectSizeToPrint}
             size={size}
-          ></SizeToPrint>
+          ></SizeToPrint> */}
         </form>
         <button className="button" onClick={paintProtein}>
           Frikear
         </button>
-        <section className={size}>
+        <section className={'size'}>
           <LandingPreview
             arrayProtein={arrayProtein}
             proteinName={proteinName}
