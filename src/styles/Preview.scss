@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+    justify-content: flex-start;
 }
 
 .oval-structure {
@@ -44,6 +45,12 @@
 }
 
 .group-and-gap {}
+
+@media print{
+    .print {
+        print-color-adjust: exact;
+    }
+}
 
 .a{
     background-color: #14b6a8;
@@ -102,7 +109,7 @@
 }
 
 .p {
-    background-color: rgb(220, 0, 7);
+    background-color: rgb(218, 0, 7);
 }
 
 .s {
@@ -126,7 +133,11 @@
 }
 
 .A4{
-    width: 248px;
-    height: 350px;
+    width: 90%;  
+}
+.group {
+    margin: 0 10px;
+    list-style: none;
+    display: inline-block;
 }
 

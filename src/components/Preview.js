@@ -1,4 +1,4 @@
-import '../styles/LandingPreview.scss';
+import '../styles/Preview.scss';
 
 const groupArr = (data, n) => {
   const group = [];
@@ -10,14 +10,18 @@ const groupArr = (data, n) => {
   return group;
 };
 
-const LandingPreview = ({ arrayProtein, proteinName, structure, gaps }) => {
+const print = () => {
+  window.print();
+};
+
+const Preview = ({ arrayProtein, proteinName, structure, gaps }) => {
   const groupProtein = groupArr(arrayProtein, gaps === 'group-and-gap' ? 5 : 0);
   const groupAminoacid = groupProtein.map((eachArray) => {
     const aminoacid = eachArray.map((eachAA, index) => {
       return (
         <li
           key={index}
-          className={`${structure}-structure ${eachAA} ${gaps}`}
+          className={`print ${structure}-structure ${eachAA} ${gaps}`}
         ></li>
       );
     });
@@ -30,10 +34,15 @@ const LandingPreview = ({ arrayProtein, proteinName, structure, gaps }) => {
 
   return (
     <>
-      <ul className="aa-list">{groupAminoacid}</ul>
-      <p>{proteinName}</p>
+      <section className="preview">
+        <ul className="aa-list">{groupAminoacid}</ul>
+        <p>{proteinName}</p>
+        <button className="button" onClick={print}>
+          Imprimir
+        </button>
+      </section>
     </>
   );
 };
 
-export default LandingPreview;
+export default Preview;
