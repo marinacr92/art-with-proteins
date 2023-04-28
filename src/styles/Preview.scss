@@ -1,8 +1,16 @@
 .preview{
+    position: absolute;
     z-index:3;
-    margin-left:50px;
-    width: 500px;
+    left: 96px;
+    width: 70%;
+    padding: 10px;
     border: 2px solid #f7a399;
+}
+
+.group-of-aa {
+    margin: 0 10px;
+    list-style: none;
+    display: inline-block;
 }
 
 .aa-list{
@@ -49,14 +57,6 @@
 
 .full-gap {
     margin: 5px;
-}
-
-.group-and-gap {}
-
-@media print {
-    .print {
-        print-color-adjust: exact;
-    }
 }
 
 .a{
@@ -139,12 +139,10 @@
     background-color: rgb(248, 215, 80);
 }
 
-.A4{
-    width: 90%;  
+@media print {
+    .print {
+        print-color-adjust: exact;
+    }
 }
-.group {
-    margin: 0 10px;
-    list-style: none;
-    display: inline-block;
-}
+
 

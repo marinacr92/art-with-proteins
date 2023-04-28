@@ -22,7 +22,7 @@ const Preview = ({ arrayProtein, proteinName, structure, gaps }) => {
       );
     });
     return (
-      <li key={index} className="group">
+      <li key={index} className="group-of-aa">
         <ul className="aa-list">{aminoacid}</ul>
       </li>
     );
