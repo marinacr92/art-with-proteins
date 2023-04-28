@@ -10,13 +10,9 @@ const groupArr = (data, n) => {
   return group;
 };
 
-const print = () => {
-  window.print();
-};
-
 const Preview = ({ arrayProtein, proteinName, structure, gaps }) => {
   const groupProtein = groupArr(arrayProtein, gaps === 'group-and-gap' ? 5 : 0);
-  const groupAminoacid = groupProtein.map((eachArray) => {
+  const groupAminoacid = groupProtein.map((eachArray, index) => {
     const aminoacid = eachArray.map((eachAA, index) => {
       return (
         <li
@@ -26,8 +22,8 @@ const Preview = ({ arrayProtein, proteinName, structure, gaps }) => {
       );
     });
     return (
-      <li className="group">
-        <ul>{aminoacid}</ul>
+      <li key={index} className="group">
+        <ul className="aa-list">{aminoacid}</ul>
       </li>
     );
   });
@@ -35,11 +31,8 @@ const Preview = ({ arrayProtein, proteinName, structure, gaps }) => {
   return (
     <>
       <section className="preview">
-        <ul className="aa-list">{groupAminoacid}</ul>
+        <ul>{groupAminoacid}</ul>
         <p>{proteinName}</p>
-        <button className="button" onClick={print}>
-          Imprimir
-        </button>
       </section>
     </>
   );

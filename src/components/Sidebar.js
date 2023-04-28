@@ -2,7 +2,7 @@ import '../styles/Sidebar.scss';
 //import menu from '../images/menu.png';
 import { useState } from 'react';
 //import { useState } from 'react';
-import FormOptions from './FormOptions';
+import StructureOptions from './StructureOptions';
 import GapsOptions from './GapsOptions';
 //import SizeToPrint from './SizeToPrint';
 
@@ -24,6 +24,10 @@ const Sidebar = ({
 
   const handleClickMenu = () => {
     setMenu(!menu);
+  };
+
+  const print = () => {
+    window.print();
   };
   // return (
   //   <>
@@ -51,36 +55,44 @@ const Sidebar = ({
   return (
     <>
       <section className="sidebar">
-        <nav className="nav_bar">
-          <ul className="nav_bar-content">
-            <li
-              className={menu === true ? 'open menu-icon' : 'menu-icon'}
-              onClick={handleClickMenu}
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-            </li>
-            <li>
-              <button className="go-icon">GO!</button>
-            </li>
-            <li>
-              <i class="fa-solid fa-print"></i>
-            </li>
-          </ul>
-        </nav>
-      </section>
-      <section className={menu === true ? 'form-options' : 'hidden'}>
-        <form className="form">
-          <InfoProt
-            handleWriteProtein={handleWriteProtein}
-            proteinSequence={proteinSequence}
-            proteinName={proteinName}
-            saveProtName={saveProtName}
-          ></InfoProt>
-          <FormOptions selectStructure={selectStructure}></FormOptions>
-          <GapsOptions setGaps={setGaps}></GapsOptions>
-        </form>
+        <section className="sidebar-nav">
+          <nav className="nav">
+            <ul className="nav-content">
+              <li
+                className={menu === true ? 'open menu-icon' : 'menu-icon'}
+                onClick={handleClickMenu}
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+              </li>
+              <li>
+                <button className="go-icon" onClick={paintProtein}>
+                  GO!
+                </button>
+              </li>
+              <li>
+                <button className="button-print" onClick={print}>
+                  <i className="fa-solid fa-print"></i>
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </section>
+        <section className={menu === true ? 'sidebar-form' : 'hidden'}>
+          <form className="form">
+            <InfoProt
+              handleWriteProtein={handleWriteProtein}
+              proteinSequence={proteinSequence}
+              proteinName={proteinName}
+              saveProtName={saveProtName}
+            ></InfoProt>
+            <StructureOptions
+              selectStructure={selectStructure}
+            ></StructureOptions>
+            <GapsOptions setGaps={setGaps}></GapsOptions>
+          </form>
+        </section>
       </section>
     </>
   );

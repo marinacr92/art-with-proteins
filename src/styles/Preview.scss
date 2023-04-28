@@ -1,3 +1,10 @@
+.preview{
+    z-index:3;
+    margin-left:50px;
+    width: 500px;
+    border: 2px solid #f7a399;
+}
+
 .aa-list{
     display: flex;
     flex-wrap: wrap;
@@ -46,7 +53,7 @@
 
 .group-and-gap {}
 
-@media print{
+@media print {
     .print {
         print-color-adjust: exact;
     }

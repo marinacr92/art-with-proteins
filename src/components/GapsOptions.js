@@ -4,41 +4,35 @@ const GapsOptions = ({ setGaps }) => {
   };
 
   return (
-    <fieldset className="fieldset gaps-options">
-      <legend className="legend">
-        <h2 className="legend-title">Elige la distribución</h2>
+    <fieldset className="form-fieldset  gaps-options">
+      <legend className="form-legend">
+        <h2 className="form-legend_title">Elige la distribución</h2>
       </legend>
-      <div className="radio-group">
-        <label className="form-label">
-          <input
-            type="radio"
-            name="gaps"
-            className="input-radio"
-            value="no-gap"
-            onChange={selectGaps}
-          />
-          Sin huecos
-        </label>
-        <label className="form-label">
-          <input
-            type="radio"
-            name="gaps"
-            className="input-radio"
-            value="full-gap"
-            onChange={selectGaps}
-          />
-          Huecos entre todos aa
-        </label>
-        <label className="form-label">
-          <input
-            type="radio"
-            name="gaps"
-            className="input-radio"
-            value="group-and-gap"
-            onChange={selectGaps}
-          />
-          Agrupar cada 5 aa
-        </label>
+      <div className="input-radio_group">
+        <input
+          type="radio"
+          name="gaps"
+          className="input-radio"
+          value="no-gap"
+          onChange={selectGaps}
+        />
+        <label className="form-label">Sin separación</label>
+        <input
+          type="radio"
+          name="gaps"
+          className="input-radio"
+          value="full-gap"
+          onChange={selectGaps}
+        />
+        <label className="form-label">Separación entre todos los aa</label>
+        <input
+          type="radio"
+          name="gaps"
+          className="input-radio"
+          value="group-and-gap"
+          onChange={selectGaps}
+        />
+        <label className="form-label">Grupos de 5 aa</label>
       </div>
     </fieldset>
   );

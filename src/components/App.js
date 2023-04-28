@@ -3,12 +3,103 @@ import { useState } from 'react';
 import Header from './Header';
 import Sidebar from './Sidebar';
 import Splash from './Splash';
-//import Preview from './Preview';
+import Preview from './Preview';
 
 function App() {
   const [proteinSequence, setProteinSequence] = useState('');
-  const [arrayProtein, setArrayProtein] = useState([]);
-  const [proteinName, setProteinName] = useState('');
+  const [arrayProtein, setArrayProtein] = useState([
+    'm',
+    'd',
+    'd',
+    'a',
+    'd',
+    'p',
+    'e',
+    'e',
+    'r',
+    'n',
+    'y',
+    'd',
+    'n',
+    'm',
+    'l',
+    'k',
+    'm',
+    'l',
+    's',
+    'd',
+    'l',
+    'n',
+    'k',
+    'd',
+    'l',
+    'e',
+    'k',
+    'l',
+    'l',
+    'e',
+    'e',
+    'm',
+    'e',
+    'k',
+    'i',
+    's',
+    'v',
+    'q',
+    'a',
+    't',
+    'w',
+    'm',
+    'a',
+    'y',
+    'd',
+    'm',
+    'v',
+    'v',
+    'm',
+    'r',
+    't',
+    'n',
+    'p',
+    't',
+    'l',
+    'a',
+    'e',
+    's',
+    'm',
+    'r',
+    'r',
+    'l',
+    'e',
+    'd',
+    'a',
+    'f',
+    'v',
+    'n',
+    'c',
+    'k',
+    'e',
+    'e',
+    'm',
+    'e',
+    'k',
+    'n',
+    'w',
+    'q',
+    'e',
+    'l',
+    'l',
+    'h',
+    'e',
+    't',
+    'k',
+    'q',
+    'r',
+    'l',
+  ]);
+  const [proteinName, setProteinName] = useState(
+    'Synaptonemal complex central element protein 3'
+  );
   const [structure, setStructure] = useState('oval');
   const [gaps, setGaps] = useState('no-gap');
   //const [size, setSize] = useState('A4');
@@ -20,6 +111,7 @@ function App() {
   const paintProtein = () => {
     const breakProt = proteinSequence.toLowerCase().split('');
     setArrayProtein(breakProt);
+    console.log(arrayProtein);
   };
 
   const saveProtName = (ev) => {
@@ -38,25 +130,25 @@ function App() {
     <>
       <Splash></Splash>
       <Header></Header>
+      <Sidebar
+        proteinSequence={proteinSequence}
+        proteinName={proteinName}
+        setGaps={setGaps}
+        selectStructure={selectStructure}
+        saveProtName={saveProtName}
+        handleWriteProtein={handleWriteProtein}
+        paintProtein={paintProtein}
+        arrayProtein={arrayProtein}
+        structure={structure}
+        gaps={gaps}
+      />
       <main className="main">
-        <Sidebar
-          proteinSequence={proteinSequence}
-          proteinName={proteinName}
-          setGaps={setGaps}
-          selectStructure={selectStructure}
-          saveProtName={saveProtName}
-          handleWriteProtein={handleWriteProtein}
-          paintProtein={paintProtein}
-          arrayProtein={arrayProtein}
-          structure={structure}
-          gaps={gaps}
-        />
-        {/* <Preview
+        <Preview
           arrayProtein={arrayProtein}
           proteinName={proteinName}
           structure={structure}
           gaps={gaps}
-        ></Preview> */}
+        ></Preview>
       </main>
     </>
   );

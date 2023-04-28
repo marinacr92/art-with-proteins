@@ -1,15 +1,29 @@
 .sidebar{
-    width: 50px;
-    background-color: #fa8678;
-    height: 100vh;
-    position: absolute;
-    top:0;
-    left: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+
+    &-nav{
+        width: 50px;
+        background-color: #fa8678;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    &-form{
+        position: relative;
+        z-index: 4;
+        width: 70%;
+        max-width: 600px;
+        background-color: #f0aea7;
+        border-radius: 0 10px 10px 0;
+    }
 }
 
-.nav_bar{
+.nav{
     width: 80%;
     padding: 10px 0;
 
@@ -138,20 +152,16 @@
     }
 }
 
+.button-print{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 .fa-print{
     color: #FFF;
     font-size: 25px;
     margin: 10px;
-}
-
-.form-options{
-    position: relative;
-    z-index: 2;
-    width: 70%;
-    max-width: 600px;
-    background-color: #f0aea7;
-    border-radius: 0 10px 10px 0;
-    margin-left: 50px;
 }
 
 .hidden{
@@ -164,57 +174,33 @@
     align-items: center;
     width:100%;
 
+    &-fieldset {
+        width: 90%;
+        border: none;
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    &-legend {
+        background-color: #f1875b;
+        padding: 5px;
+        border-radius: 5px;
+        width: 100%;
+        text-align: center;
+
+        &_title {
+            font-family: 'Dancing Script', cursive;
+            color: rgb(0, 0, 0)
+        }
+    }
+
     &-label{
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 17px;
+        font-family: 'Architects Daughter', cursive;
+        font-size: 1.2rem;
+        color: black;
         margin: 15px 0;
     }
-
-    &-textarea{
-        height: 200px;
-        width: 100%;
-        border-radius: 8px;
-        padding: 8px;
-    }
-
-    &-input{
-        height: 25px;
-        width: 100%;
-        border-radius: 8px;
-        padding: 0 8px;
-    }
-}
-
-.button{
-    width: 150px;
-    border: none;
-    border-radius: 5px;
-    font-size: 25px;
-    background-color: #fa8678;
-    font-family: 'Dancing Script', cursive;
-    color: grey;
-    margin-bottom: 15px;
-}
-
-.fieldset{
-    width: 90%;
-    border: none;
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-}
-
-.legend{
-    background-color: rgb(251, 187, 70);
-    padding: 5px;
-    border-radius: 5px;
-    width: 100%;
-    text-align: center;
-}
-
-.legend-title{
-    font-family: 'Dancing Script', cursive;
-    color: grey
 }
 
 .info-prot{
@@ -222,13 +208,38 @@
     flex-direction: column;
 }
 
-.radio-group{
-    width:90%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.input-text{
+    height: 25px;
+    width: 100%;
+    border-radius: 8px;
+    padding: 0 8px;
 }
 
-.input-radio{
+.textarea {
+    height: 200px;
+    width: 100%;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.structure-options{
+
+}
+
+.gaps-options {}
+
+.input-radio_group {
+    width: 90%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 30px 1fr);   
+}
+
+.input-radio {
     margin: 0 8px;
 }
+
+
+
+
 
