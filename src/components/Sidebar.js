@@ -2,11 +2,11 @@ import '../styles/Sidebar.scss';
 //import menu from '../images/menu.png';
 import { useState } from 'react';
 //import { useState } from 'react';
-//import FormOptions from './FormOptions';
-//import GapsOptions from './GapsOptions';
+import FormOptions from './FormOptions';
+import GapsOptions from './GapsOptions';
 //import SizeToPrint from './SizeToPrint';
 
-//import InfoProt from './InfoProt';
+import InfoProt from './InfoProt';
 
 const Sidebar = ({
   proteinSequence,
@@ -20,7 +20,7 @@ const Sidebar = ({
   handleWriteProtein,
   paintProtein,
 }) => {
-  const [menu, setMenu] = useState('false');
+  const [menu, setMenu] = useState(false);
 
   const handleClickMenu = () => {
     setMenu(!menu);
@@ -61,10 +61,26 @@ const Sidebar = ({
               <span></span>
               <span></span>
             </li>
-            <li>Botón frikear</li>
-            <li>Botón imprimir</li>
+            <li>
+              <button className="go-icon">GO!</button>
+            </li>
+            <li>
+              <i class="fa-solid fa-print"></i>
+            </li>
           </ul>
         </nav>
+      </section>
+      <section className={menu === true ? 'form-options' : 'hidden'}>
+        <form className="form">
+          <InfoProt
+            handleWriteProtein={handleWriteProtein}
+            proteinSequence={proteinSequence}
+            proteinName={proteinName}
+            saveProtName={saveProtName}
+          ></InfoProt>
+          <FormOptions selectStructure={selectStructure}></FormOptions>
+          <GapsOptions setGaps={setGaps}></GapsOptions>
+        </form>
       </section>
     </>
   );

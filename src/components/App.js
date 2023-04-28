@@ -2,6 +2,7 @@ import '../styles/App.scss';
 import { useState } from 'react';
 import Header from './Header';
 import Sidebar from './Sidebar';
+import Splash from './Splash';
 //import Preview from './Preview';
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <>
+      <Splash></Splash>
       <Header></Header>
       <main className="main">
         <Sidebar

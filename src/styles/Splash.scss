@@ -1,0 +1,46 @@
+@keyframes firstAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.5;
+        z-index:4;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+        z-index:0;
+    }
+}
+
+.splash{
+    position: absolute;
+    z-index: 4;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: firstAnimation;
+    animation-duration: 5000ms;
+    animation-fill-mode: forwards;
+
+    &-title{
+        z-index: 6;
+        font-family: 'Dancing Script', cursive;
+        font-size: 4rem;
+        color: rgb(98, 98, 98);
+    }
+
+    &-watercolor{
+        z-index: 5;
+        position: absolute;
+    }
+}
