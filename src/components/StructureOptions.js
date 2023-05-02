@@ -1,6 +1,12 @@
-const StructureOptions = ({ selectStructure, structure }) => {
+const StructureOptions = ({ selectStructure, structure, menu }) => {
   return (
-    <fieldset className="form-fieldset  structure-options">
+    <fieldset
+      className={
+        menu === true
+          ? 'form-fieldset structure-options fieldset-appears'
+          : 'form-fieldset structure-options fieldset-desappears'
+      }
+    >
       <legend className="form-legend">
         <h2 className="form-legend_title">Elige la forma</h2>
       </legend>

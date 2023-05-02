@@ -4,9 +4,16 @@ const InfoProt = ({
   saveProtName,
   //paintProtein,
   proteinName,
+  menu,
 }) => {
   return (
-    <fieldset className="form-fieldset info-prot">
+    <fieldset
+      className={
+        menu === true
+          ? 'form-fieldset info-prot fieldset-appears'
+          : 'form-fieldset info-prot fieldset-desappears'
+      }
+    >
       <legend className="form-legend">
         <h2 className="form-legend_title">Introduce la info de la proteína</h2>
       </legend>

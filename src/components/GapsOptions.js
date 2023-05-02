@@ -1,10 +1,16 @@
-const GapsOptions = ({ setGaps, gaps }) => {
+const GapsOptions = ({ setGaps, gaps, menu }) => {
   const selectGaps = (ev) => {
     setGaps(ev.target.value);
   };
 
   return (
-    <fieldset className="form-fieldset  gaps-options">
+    <fieldset
+      className={
+        menu === true
+          ? 'form-fieldset gaps-options fieldset-appears'
+          : 'form-fieldset gaps-options fieldset-desappears'
+      }
+    >
       <legend className="form-legend">
         <h2 className="form-legend_title">Elige la distribución</h2>
       </legend>

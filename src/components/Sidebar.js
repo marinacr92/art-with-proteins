@@ -83,19 +83,31 @@ const Sidebar = ({
             </ul>
           </nav>
         </section>
-        <section className={menu === true ? 'sidebar-form' : 'hidden'}>
+        <section
+          className={
+            menu === true
+              ? 'sidebar-form open-sidebar'
+              : 'sidebar-form close-sidebar'
+          }
+        >
           <form className="form">
             <InfoProt
               handleWriteProtein={handleWriteProtein}
               proteinSequence={proteinSequence}
               proteinName={proteinName}
               saveProtName={saveProtName}
+              menu={menu}
             ></InfoProt>
             <StructureOptions
               selectStructure={selectStructure}
               structure={structure}
+              menu={menu}
             ></StructureOptions>
-            <GapsOptions gaps={gaps} setGaps={setGaps}></GapsOptions>
+            <GapsOptions
+              gaps={gaps}
+              setGaps={setGaps}
+              menu={menu}
+            ></GapsOptions>
           </form>
         </section>
         <section
