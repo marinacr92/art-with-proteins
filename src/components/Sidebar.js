@@ -98,6 +98,10 @@ const Sidebar = ({
             <GapsOptions gaps={gaps} setGaps={setGaps}></GapsOptions>
           </form>
         </section>
+        <section
+          className="sidebar-leftover"
+          onClick={menu === true ? handleClickMenu : ''}
+        ></section>
       </section>
     </>
   );

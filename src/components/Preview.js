@@ -19,7 +19,9 @@ const Preview = ({ arrayProtein, proteinName, structure, gaps }) => {
         <li
           key={index}
           className={`print ${structure}-structure ${eachAA} ${gaps}`}
-        ></li>
+        >
+          <Protein isTriangle={structure === 'triangle'} />
+        </li>
       );
     });
     return (
@@ -41,6 +43,11 @@ const Preview = ({ arrayProtein, proteinName, structure, gaps }) => {
       </section>
     </>
   );
+};
+
+const Protein = ({ isTriangle }) => {
+  console.log('isTriangle', isTriangle);
+  return isTriangle ? <i className="fa-solid fa-play"></i> : <></>;
 };
 
 export default Preview;

@@ -38,7 +38,7 @@
     justify-content: flex-start;
     position: absolute;
     z-index: 3;
-    
+    width: 100%;
 
     &-nav{
         width: 50px;
@@ -62,6 +62,13 @@
         animation-name: openSidebar;
         animation-duration: 300ms;
         animation-fill-mode: forwards;
+    }
+
+    &-leftover{
+        background-color: transparent;
+        position: relative;
+        z-index: 4;
+        width: 100%;
     }
 }
 

@@ -7,7 +7,7 @@
 }
 
 .group-of-aa {
-    margin: 0 8px;
+    margin: 0 15px;
     list-style: none;
     display: inline-block;
 }
@@ -42,12 +42,22 @@
     border-radius: 8px;
 }
 
-.triangle-structure{
-    width: 0;
-    height: 0;
-    border-left: 20px solid white;
-    border-right: 20px solid white;
-    border-bottom: 30px solid transparent;
+// .triangle-structure{
+//     width: 0;
+//     height: 0;
+//     border-left: 20px solid white;
+//     border-right: 20px solid white;
+//     border-bottom: 30px solid transparent;
+// }
+.triangle-structure {
+    background: transparent !important;
+    font-size: 40px;
+    &:nth-child(even) {
+        transform: rotate(270deg);
+    }
+    &:nth-child(odd) {
+        transform: translateX(-3px) rotate(90deg);
+    }
 }
 
 .no-gap {
@@ -60,82 +70,102 @@
 
 .a{
     background-color: #14b6a8;
+    color: #14b6a8;
 }
 
 .r{
     background-color: #f7a399;
+    color: #f7a399;
 }
 
 .n{
     background-color: #cf5591;
+    color: #cf5591;
 }
 
 .d{
     background-color: #cfe26e;
+    color: #cfe26e;
 }
 
 .c{
     background-color: darkgoldenrod;
+    color: darkgoldenrod;
 }
 
 .q {
     background-color: rgb(158, 87, 226);
+    color: rgb(158, 87, 226);
 }
 
 .e {
     background-color: #4160a9;
+    color: #4160a9;
 }
 
 .g {
     background-color: brown;
+    color: brown;
 }
 
 .h {
     background-color: rgb(76, 142, 10);
+    color: rgb(76, 142, 10);
 }
 
 .i {
     background-color: rgb(255, 251, 54);
+    color: rgb(255, 251, 54);
 }
 
 .l {
     background-color: rgb(228, 74, 112);
+    color: rgb(228, 74, 112);
 }
 
 .k {
     background-color: rgb(0, 162, 202);
+    color: rgb(0, 162, 202);
 }
 
 .m {
     background-color: rgb(255, 138, 28);
+    color: rgb(255, 138, 28);
 }
 
 .f {
     background-color: rgb(56, 255, 112);
+    color: rgb(56, 255, 112);
 }
 
 .p {
     background-color: rgb(218, 0, 7);
+    color: rgb(218, 0, 7);
 }
 
 .s {
     background-color: rgb(128, 19, 108);
+    color: rgb(128, 19, 108);
 }
 
 .t {
     background-color: rgb(135, 120, 209);
+    color: rgb(135, 120, 209);
 }
 
 .w {
     background-color: rgb(132, 180, 209);
+    color: rgb(132, 180, 209);
 }
 
 .y {
     background-color: rgb(77, 134, 83);
+    color: rgb(77, 134, 83);
 }
 
 .v {
     background-color: rgb(248, 215, 80);
+    color: rgb(248, 215, 80);
 }
 
 .protein-name{
