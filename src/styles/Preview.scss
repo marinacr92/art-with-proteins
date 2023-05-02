@@ -1,14 +1,13 @@
 .preview{
-    position: absolute;
     z-index:3;
-    left: 96px;
     width: 70%;
-    padding: 10px;
-    border: 2px solid #f7a399;
+    //border: 2px solid #f7a399;
+    // border-radius: 10px;
+    
 }
 
 .group-of-aa {
-    margin: 0 10px;
+    margin: 0 8px;
     list-style: none;
     display: inline-block;
 }
@@ -139,10 +138,14 @@
     background-color: rgb(248, 215, 80);
 }
 
-@media print {
-    .print {
-        print-color-adjust: exact;
-    }
+.protein-name{
+    font-family: 'Gochi Hand', cursive;
+    font-size: 12pt;
+    margin-top: 10px;
+    color: grey;
 }
+
+
+
 
 

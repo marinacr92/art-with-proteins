@@ -1,4 +1,5 @@
 import '../styles/App.scss';
+import '../styles/Print.scss';
 import { useState } from 'react';
 import Header from './Header';
 import Sidebar from './Sidebar';
@@ -97,7 +98,9 @@ function App() {
     'r',
     'l',
   ]);
-  const [proteinName, setProteinName] = useState('');
+  const [proteinName, setProteinName] = useState(
+    'Synaptonemal complex central element protein 3'
+  );
   const [structure, setStructure] = useState('oval');
   const [gaps, setGaps] = useState('no-gap');
   //const [size, setSize] = useState('A4');
@@ -128,20 +131,19 @@ function App() {
     <>
       <Splash></Splash>
       <Header></Header>
+      <Sidebar
+        proteinSequence={proteinSequence}
+        proteinName={proteinName}
+        setGaps={setGaps}
+        selectStructure={selectStructure}
+        saveProtName={saveProtName}
+        handleWriteProtein={handleWriteProtein}
+        paintProtein={paintProtein}
+        arrayProtein={arrayProtein}
+        structure={structure}
+        gaps={gaps}
+      />
       <main className="main">
-        <Sidebar
-          proteinSequence={proteinSequence}
-          proteinName={proteinName}
-          setGaps={setGaps}
-          selectStructure={selectStructure}
-          saveProtName={saveProtName}
-          handleWriteProtein={handleWriteProtein}
-          paintProtein={paintProtein}
-          arrayProtein={arrayProtein}
-          structure={structure}
-          gaps={gaps}
-        />
-
         <Preview
           arrayProtein={arrayProtein}
           proteinName={proteinName}

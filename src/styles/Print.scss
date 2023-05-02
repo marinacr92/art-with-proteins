@@ -1,0 +1,27 @@
+@media print {
+    .print {
+        print-color-adjust: exact;
+    }
+
+    .menu-icon{
+        display:none;
+    }
+
+    .go-icon{
+        display: none;
+    }
+
+    .button-print{
+        display: none;
+    }
+
+    .protein-name{
+        font-size:30pt;
+    }
+
+    .header{
+        display: none;
+    }
+
+
+}

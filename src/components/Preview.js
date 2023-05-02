@@ -1,4 +1,5 @@
 import '../styles/Preview.scss';
+import '../styles/Print.scss';
 
 const groupArr = (data, n) => {
   const group = [];
@@ -32,7 +33,11 @@ const Preview = ({ arrayProtein, proteinName, structure, gaps }) => {
     <>
       <section className="preview">
         <ul>{groupAminoacid}</ul>
-        <p>{proteinName}</p>
+        <p className="protein-name print">
+          {proteinName === ''
+            ? 'Synaptonemal complex central element protein 3'
+            : proteinName}
+        </p>
       </section>
     </>
   );

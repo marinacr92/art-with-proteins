@@ -1,4 +1,5 @@
 import '../styles/Sidebar.scss';
+import '../styles/Print.scss';
 //import menu from '../images/menu.png';
 import { useState } from 'react';
 //import { useState } from 'react';
