@@ -98,9 +98,7 @@ function App() {
     'r',
     'l',
   ]);
-  const [proteinName, setProteinName] = useState(
-    'Synaptonemal complex central element protein 3'
-  );
+  const [proteinName, setProteinName] = useState('');
   const [structure, setStructure] = useState('oval');
   const [gaps, setGaps] = useState('no-gap');
   //const [size, setSize] = useState('A4');
@@ -112,7 +110,6 @@ function App() {
   const paintProtein = () => {
     const breakProt = proteinSequence.toLowerCase().split('');
     setArrayProtein(breakProt);
-    console.log(arrayProtein);
   };
 
   const saveProtName = (ev) => {

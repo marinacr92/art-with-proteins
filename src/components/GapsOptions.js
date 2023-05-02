@@ -1,4 +1,4 @@
-const GapsOptions = ({ setGaps }) => {
+const GapsOptions = ({ setGaps, gaps }) => {
   const selectGaps = (ev) => {
     setGaps(ev.target.value);
   };
@@ -15,6 +15,7 @@ const GapsOptions = ({ setGaps }) => {
           className="input-radio"
           value="no-gap"
           onChange={selectGaps}
+          checked={gaps === 'no-gap'}
         />
         <label className="form-label">Sin separación</label>
         <input

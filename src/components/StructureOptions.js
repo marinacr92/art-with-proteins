@@ -1,4 +1,4 @@
-const StructureOptions = ({ selectStructure }) => {
+const StructureOptions = ({ selectStructure, structure }) => {
   return (
     <fieldset className="form-fieldset  structure-options">
       <legend className="form-legend">
@@ -11,6 +11,7 @@ const StructureOptions = ({ selectStructure }) => {
           className="input-radio"
           value="oval"
           onChange={selectStructure}
+          checked={structure === 'oval'}
         />
         <label className="form-label">Ovalada</label>
         <input

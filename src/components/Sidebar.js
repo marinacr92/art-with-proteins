@@ -67,12 +67,15 @@ const Sidebar = ({
                 <span></span>
                 <span></span>
               </li>
-              <li>
-                <button className="go-icon" onClick={paintProtein}>
+              <li style={{ gridRow: '2 / 3' }}>
+                <button
+                  className="go-icon"
+                  onClick={proteinSequence === '' ? '' : paintProtein}
+                >
                   GO!
                 </button>
               </li>
-              <li>
+              <li style={{ gridRow: '4 / 5' }}>
                 <button className="button-print" onClick={print}>
                   <i className="fa-solid fa-print"></i>
                 </button>
@@ -90,8 +93,9 @@ const Sidebar = ({
             ></InfoProt>
             <StructureOptions
               selectStructure={selectStructure}
+              structure={structure}
             ></StructureOptions>
-            <GapsOptions setGaps={setGaps}></GapsOptions>
+            <GapsOptions gaps={gaps} setGaps={setGaps}></GapsOptions>
           </form>
         </section>
       </section>

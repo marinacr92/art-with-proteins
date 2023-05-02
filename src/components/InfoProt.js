@@ -2,6 +2,7 @@ const InfoProt = ({
   handleWriteProtein,
   proteinSequence,
   saveProtName,
+  //paintProtein,
   proteinName,
 }) => {
   return (
@@ -14,7 +15,7 @@ const InfoProt = ({
         type="text"
         className="input-text"
         placeholder="Ej: Synaptonemal complex central element protein 3"
-        onChange={saveProtName}
+        onInput={saveProtName}
         value={proteinName}
       />
       <label className="form-label">
