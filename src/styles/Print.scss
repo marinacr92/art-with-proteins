@@ -3,8 +3,24 @@
         print-color-adjust: exact;
     }
 
-    .menu-icon{
-        display:none;
+    .splash{
+        display: none !important;
+    }
+
+    .header {
+        display: none !important;
+    }
+
+    .main {
+        padding-left: 0px;
+    }
+
+    .preview {
+        width: 100%;
+    }
+
+    .menu-icon {
+        display: none !important;
     }
 
     .go-icon{
@@ -15,15 +31,40 @@
         display: none;
     }
 
-    .sidebar-form{
-        display: none;
+    .sidebar {
+        display: none !important;
     }
 
     .protein-name{
-        font-size:30pt;
+        font-size:1.8rem !important;
     }
 
-    .header{
-        display: none;
+    .oval-structure {
+        width: 2rem !important;
+        height: 3rem !important;
+    }
+
+    .sfere-structure {
+        width: 3rem !important;
+        height: 3rem !important;
+    }
+
+    .square-structure {
+        width: 3rem !important;
+        height: 3rem !important;
+    }
+
+    .semi-square-structure {
+        width: 3rem !important;
+        height: 3rem !important;
+        border-radius: 0.8rem !important;
+    }
+
+    .triangle-structure {
+        font-size: 4rem !important;
+
+        &:nth-child(odd) {
+            transform: translateX(0.85rem) rotate(90deg) !important;
+        }
     }
 }
