@@ -90,7 +90,10 @@ const Sidebar = ({
               : 'sidebar-form close-sidebar'
           }
         >
-          <form className="form">
+          <form
+            className="form"
+            style={menu === true ? { display: 'flex' } : { display: 'none' }}
+          >
             <InfoProt
               handleWriteProtein={handleWriteProtein}
               proteinSequence={proteinSequence}
