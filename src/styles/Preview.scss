@@ -1,13 +1,12 @@
 .preview{
     z-index:3;
-    width: 70%;
+    width: 85%;
     //border: 2px solid #f7a399;
     // border-radius: 10px;
     
 }
 
 .group-of-aa {
-    margin: 0 15px;
     list-style: none;
     display: inline-block;
 }
@@ -20,26 +19,34 @@
 }
 
 .oval-structure {
-    width: 20px;
-    height: 30px;
+    //width: 20px;
+    //height: 30px;
+    width: 1rem;
+    height: 1.5rem;
     border-radius: 50%;
 }
 
 .sfere-structure {
-    width: 30px;
-    height: 30px;
+    //width: 30px;
+    //height: 30px;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 50%;
 }
 
 .square-structure {
-    width: 30px;
-    height: 30px;
+    //width: 30px;
+    //height: 30px;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .semi-square-structure {
-    width: 30px;
-    height: 30px;
-    border-radius: 8px;
+    // width: 30px;
+    // height: 30px;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.4rem;
 }
 
 // .triangle-structure{
@@ -51,12 +58,12 @@
 // }
 .triangle-structure {
     background: transparent !important;
-    font-size: 40px;
+    font-size: 3rem;
     &:nth-child(even) {
         transform: rotate(270deg);
     }
     &:nth-child(odd) {
-        transform: translateX(-3px) rotate(90deg);
+        transform: translateX(0.6rem) rotate(90deg);
     }
 }
 
@@ -65,7 +72,7 @@
 }
 
 .full-gap {
-    margin: 5px;
+    margin:0.2rem;
 }
 
 .a{
@@ -170,8 +177,8 @@
 
 .protein-name{
     font-family: 'Gochi Hand', cursive;
-    font-size: 12pt;
-    margin-top: 10px;
+    font-size: 1.2rem;
+    margin-top: 1rem;
     color: grey;
 }
 

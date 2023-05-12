@@ -127,7 +127,6 @@ function App() {
   return (
     <>
       <Splash></Splash>
-      <Header></Header>
       <Sidebar
         proteinSequence={proteinSequence}
         proteinName={proteinName}
@@ -140,14 +139,17 @@ function App() {
         structure={structure}
         gaps={gaps}
       />
-      <main className="main">
-        <Preview
-          arrayProtein={arrayProtein}
-          proteinName={proteinName}
-          structure={structure}
-          gaps={gaps}
-        ></Preview>
-      </main>
+      <section className="body-of-body">
+        <Header></Header>
+        <main className="main">
+          <Preview
+            arrayProtein={arrayProtein}
+            proteinName={proteinName}
+            structure={structure}
+            gaps={gaps}
+          ></Preview>
+        </main>
+      </section>
     </>
   );
 }
