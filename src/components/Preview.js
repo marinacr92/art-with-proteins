@@ -14,6 +14,11 @@ const groupArr = (data, n) => {
 const Preview = ({ arrayProtein, proteinName, structure, gaps }) => {
   const groupProtein = groupArr(arrayProtein, gaps === 'group-and-gap' ? 5 : 0);
   const groupAminoacid = groupProtein.map((eachArray, index) => {
+    if (eachArray.length < 5) {
+      for (let i = eachArray.length; i < 5; i++) {
+        eachArray.push('T');
+      }
+    }
     const aminoacid = eachArray.map((eachAA, index) => {
       return (
         <li
@@ -25,7 +30,15 @@ const Preview = ({ arrayProtein, proteinName, structure, gaps }) => {
       );
     });
     return (
-      <li key={index} className="group-of-aa">
+      <li
+        key={index}
+        className="group-of-aa"
+        style={
+          structure === 'triangle'
+            ? { marginBottom: '-15px' }
+            : { marginBottom: '0px' }
+        }
+      >
         <ul className="aa-list">{aminoacid}</ul>
       </li>
     );
@@ -34,7 +47,9 @@ const Preview = ({ arrayProtein, proteinName, structure, gaps }) => {
   return (
     <>
       <section className="preview">
-        <ul>{groupAminoacid}</ul>
+        <ul className={gaps === 'group-and-gap' ? 'preview-container' : ''}>
+          {groupAminoacid}
+        </ul>
         <p className="protein-name print">
           {proteinName === ''
             ? 'Synaptonemal complex central element protein 3'

@@ -1,9 +1,16 @@
-.preview{
+.preview {
     z-index:3;
-    width: 85%;
-    //border: 2px solid #f7a399;
+    width: 100%;
+    // border: 2px solid #f7a399;
     // border-radius: 10px;
     
+}
+
+.preview-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    justify-items: center;
 }
 
 .group-of-aa {
@@ -173,6 +180,11 @@
 .v {
     background-color: rgb(248, 215, 80);
     color: rgb(248, 215, 80);
+}
+
+.T {
+    background-color: transparent;
+    color: transparent;
 }
 
 .protein-name{
