@@ -4,13 +4,12 @@
     // border: 2px solid #f7a399;
     // border-radius: 10px;
     
-}
-
-.preview-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 100%;
-    justify-items: center;
+    &-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        justify-items: center;
+    }
 }
 
 .group-of-aa {
