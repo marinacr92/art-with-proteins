@@ -39,7 +39,7 @@ const GapsOptions = ({ setGaps, gaps, menu }) => {
           value="group-and-gap"
           onChange={selectGaps}
         />
-        <label className="form-label">Grupos de 5 aa</label>
+        <label className="form-label">En columnas</label>
       </div>
     </fieldset>
   );
