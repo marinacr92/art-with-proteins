@@ -59,8 +59,7 @@
     height: 100%;
 
     &-nav{
-        width:4rem;
-        max-width: 50px;
+        width: 5rem;
         background-color: #fa8678;
         min-height: 100vh;
         //position: sticky;
@@ -125,8 +124,8 @@
 .menu-icon {
     //width: 30px;
     //height: 25px;
-    width: 2.5rem;
-    height: 1.8rem;
+    width: 3rem;
+    height: 2.5rem;
     position: relative;
     cursor: pointer;
     display: inline-block;
@@ -142,7 +141,7 @@
 
 .menu-icon span:nth-child(1) {
     width: 100%;
-    height: 3px;
+    height: 5px;
     display: block;
     top: 0px;
     left: 0px;
@@ -150,15 +149,15 @@
 
 .menu-icon span:nth-child(2) {
     width: 100%;
-    height: 3px;
+    height: 5px;
     display: block;
-    top: 8px;
+    top: 10px;
     left: 0px;
 }
 
 .menu-icon span:nth-child(3) {
     width: 100%;
-    height: 3px;
+    height: 5px;
     display: block;
     bottom: 0px;
     left: 0px;
@@ -166,7 +165,7 @@
 
 .menu-icon:not(.open):hover span:nth-child(1) {
     width: 100%;
-    height: 3px;
+    height: 5px;
     display: block;
     top: -2px;
     left: 0px;
@@ -175,16 +174,16 @@
 
 .menu-icon:not(.open):hover span:nth-child(2) {
     width: 100%;
-    height: 3px;
+    height: 5px;
     display: block;
-    top: 8px;
+    top: 10px;
     left: 0px;
     transition: .4s cubic-bezier(.8, .5, .2, 1.4);
 }
 
 .menu-icon:not(.open):hover span:nth-child(3) {
     width: 100%;
-    height: 3px;
+    height: 5px;
     display: block;
     bottom: -2px;
     left: 0px;
@@ -225,9 +224,9 @@
 .go-icon{
     background-color: #FFF;
     border: none;
-    width: 30px;
-    height: 30px;
-    font-size: 1.2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.6rem;
     border-radius: 50%;
     color: #fa8678;
     font-family: 'Raleway', sans-serif;
@@ -235,9 +234,9 @@
     cursor: pointer;
 
     &:hover{
-        width: 35px;
-        height: 35px;
-        font-size: 1.8rem;
+        width: 4rem;
+        height: 4rem;
+        font-size: 2rem;
     }
 }
 
@@ -249,7 +248,7 @@
 
 .fa-print{
     color: #FFF;
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin: 10px;
     transition: 0.5s;
 
@@ -289,7 +288,7 @@
 
     &-label{
         font-family: 'Architects Daughter', cursive;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         color: black;
         margin: 5px 0;
     }
@@ -328,7 +327,7 @@
 .input-text{
     height: 20px;
     width: 100%;
-    font-size: 1rem;
+    font-size: 1.2rem;
     border-radius: 5px;
     padding: 0 5px;
 }
@@ -337,13 +336,13 @@
     //height: 200px;
     height: 150px;
     width: 100%;
-    font-size: 1rem;
+    font-size: 1.1rem;
     border-radius: 5px;
     padding: 5px;
 }
 
 .input-radio_group {
-    width: 90%;
+    width: 100%;
     display: grid;
     align-items: center;
     grid-template-columns: repeat(2, 30px 1fr);   

@@ -26,31 +26,23 @@
 }
 
 .oval-structure {
-    //width: 20px;
-    //height: 30px;
     width: 1rem;
     height: 1.5rem;
     border-radius: 50%;
 }
 
 .sfere-structure {
-    //width: 30px;
-    //height: 30px;
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
 }
 
 .square-structure {
-    //width: 30px;
-    //height: 30px;
     width: 1.5rem;
     height: 1.5rem;
 }
 
 .semi-square-structure {
-    // width: 30px;
-    // height: 30px;
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 0.4rem;
@@ -70,16 +62,16 @@
         transform: rotate(270deg);
     }
     &:nth-child(odd) {
-        transform: translateX(0.6rem) rotate(90deg);
+        transform: translateX(0.6rem) rotate(90deg); //triangulos no gap translatex 0.7
     }
 }
 
 .no-gap {
-    margin: 0;
+    margin: 0; //triángulos no gap -10px -1px
 }
 
 .full-gap {
-    margin:0.2rem;
+    margin: 0.2rem; //triángulos full gap -10px 0.2rem
 }
 
 .a{
@@ -189,8 +181,8 @@
 
 .protein-name{
     font-family: 'Gochi Hand', cursive;
-    font-size: 1.2rem;
-    margin-top: 1rem;
+    font-size: 1.3rem;
+    margin-top: 2rem;
     color: grey;
 }
 
