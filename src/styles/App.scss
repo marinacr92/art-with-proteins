@@ -8,6 +8,10 @@
     @media all and (min-width: 768px) {
         font-size: 80%;
     }
+
+    @media all and (min-width: 1024px) {
+        font-size: 90%;
+    }
 }
 
 .body-of-body{
@@ -30,4 +34,12 @@
     // justify-content: center;
     // flex-direction: column;
     // align-items: center;
+
+    @media all and (min-width: 768px) {
+        padding: 3rem 5rem 3rem 10rem;
+    }
+
+    @media all and (min-width: 1024px) {
+        padding: 3rem 10rem 3rem 15rem;
+    }
 }
