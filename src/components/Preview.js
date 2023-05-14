@@ -11,7 +11,8 @@ const groupArr = (data, n) => {
   return group;
 };
 
-const Preview = ({ arrayProtein, proteinName, structure, gaps }) => {
+const Preview = ({ proteinSequence, proteinName, structure, gaps }) => {
+  const arrayProtein = proteinSequence.toLowerCase().split('');
   const groupProtein = groupArr(arrayProtein, gaps === 'group-and-gap' ? 5 : 0);
   const groupAminoacid = groupProtein.map((eachArray, index) => {
     if (eachArray.length < 5) {

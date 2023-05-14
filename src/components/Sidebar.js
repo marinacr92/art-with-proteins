@@ -10,16 +10,17 @@ import GapsOptions from './GapsOptions';
 import InfoProt from './InfoProt';
 
 const Sidebar = ({
+  defaultSequence,
   proteinSequence,
   proteinName,
-  arrayProtein,
+  // arrayProtein,
   setGaps,
   gaps,
   selectStructure,
   structure,
   saveProtName,
   handleWriteProtein,
-  paintProtein,
+  // paintProtein,
 }) => {
   const [menu, setMenu] = useState(false);
 
@@ -68,16 +69,13 @@ const Sidebar = ({
                 <span></span>
               </li>
               <li style={{ gridRow: '2 / 3' }}>
-                <button
-                  className="go-icon"
-                  onClick={proteinSequence === '' ? '' : paintProtein}
-                >
-                  GO!
+                <button className="button-print" onClick={print}>
+                  <i className="fa-solid fa-print"></i>
                 </button>
               </li>
               <li style={{ gridRow: '4 / 5' }}>
-                <button className="button-print" onClick={print}>
-                  <i className="fa-solid fa-print"></i>
+                <button className="button-info">
+                  <i class="fa-solid fa-circle-info"></i>
                 </button>
               </li>
             </ul>
@@ -95,6 +93,7 @@ const Sidebar = ({
             style={menu === true ? { display: 'flex' } : { display: 'none' }}
           >
             <InfoProt
+              defaultSequence={defaultSequence}
               handleWriteProtein={handleWriteProtein}
               proteinSequence={proteinSequence}
               proteinName={proteinName}

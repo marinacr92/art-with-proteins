@@ -1,4 +1,5 @@
 const InfoProt = ({
+  defaultSequence,
   handleWriteProtein,
   proteinSequence,
   saveProtName,
@@ -30,7 +31,7 @@ const InfoProt = ({
       </label>
       <textarea
         className="textarea"
-        placeholder="Ej: MDDADPEERNYDNMLKMLSDLNKDLEKLLEEMEKISVQATWMAYDMVVMRTNPTLAESMRRLEDAFVNCKEEMEKNWQELLHETKQRL"
+        placeholder={`Ej: ${defaultSequence}`}
         cols="30"
         rows="10"
         onInput={handleWriteProtein}

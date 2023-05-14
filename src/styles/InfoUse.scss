@@ -1,0 +1,84 @@
+.info{
+    
+
+    &-title{
+        font-size: 2.5rem;
+        font-family: 'Architects Daughter', cursive;
+        color: rgb(93, 93, 93);
+        
+
+        &_container{
+            background-color: #f2a17e;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            z-index: 2;
+            transform: translateX(25px);
+        }
+    }
+
+    &-description{
+        font-size: 1.6rem;
+        font-family: 'Architects Daughter', cursive;
+        color: grey;
+
+        &_container{
+            background-color: #f1cbc7;
+            padding: 3rem 2rem 0.5rem 2rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            transform: translateY(-35px);
+            z-index: 0;
+            
+            position: relative;
+        }
+    }
+
+    &-caption{
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        &_container{
+            background-color: white;
+            box-shadow: 2px 2px 2px 2px #8c8c8c;
+            border-radius: 8px;
+            min-width: 200px;
+            min-height: 200px;
+            padding: 10px 20px;
+            position: absolute;
+            right: -25px;
+            bottom: -30px;
+        }
+
+        &_element {
+            display: grid;
+            grid-template-columns: 30px 1fr;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        &_dot {
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50px;
+        }
+    
+        &_aa {
+            font-family: 'Architects Daughter', cursive;
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.large-container {
+    width: 100%;
+    text-align: justify;
+}
+
+.small-container{
+    width: 75%;
+    text-align: justify;
+}
+
+

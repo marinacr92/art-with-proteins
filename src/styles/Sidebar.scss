@@ -250,22 +250,19 @@
     }
 }
 
-.go-icon{
-    background-color: #FFF;
+.button-info{
+    background-color: transparent;
     border: none;
-    width: 3.5rem;
-    height: 3.5rem;
-    font-size: 1.6rem;
-    border-radius: 50%;
-    color: #fa8678;
-    font-family: 'Raleway', sans-serif;
-    transition: width 0.25s, height 0.25s, font-size 0.25s;
-    cursor: pointer;
+    cursor: pointer;   
+}
 
-    &:hover{
-        width: 4rem;
-        height: 4rem;
-        font-size: 2rem;
+.fa-circle-info{
+    font-size: 3rem;
+    transition: font-size 0.25s;
+    color: #FFF;
+        
+    &:hover {
+        font-size: 4rem;
     }
 }
 
