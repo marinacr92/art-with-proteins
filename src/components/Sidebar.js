@@ -21,6 +21,8 @@ const Sidebar = ({
   saveProtName,
   handleWriteProtein,
   // paintProtein,
+  checked,
+  setChecked,
 }) => {
   const [menu, setMenu] = useState(false);
 
@@ -28,9 +30,14 @@ const Sidebar = ({
     setMenu(!menu);
   };
 
+  const handleClickInfo = () => {
+    setChecked(!checked);
+  };
+
   const print = () => {
     window.print();
   };
+
   // return (
   //   <>
   //     <section className="sidebar">
@@ -73,9 +80,16 @@ const Sidebar = ({
                   <i className="fa-solid fa-print"></i>
                 </button>
               </li>
-              <li style={{ gridRow: '4 / 5' }}>
-                <button className="button-info">
-                  <i class="fa-solid fa-circle-info"></i>
+              <li style={{ gridRow: '4 / 5' }} onClick={handleClickInfo}>
+                <button
+                  className="button-info"
+                  style={
+                    checked === true
+                      ? { boxShadow: 'inset 0px 4px 6px #444444' }
+                      : { boxShadow: '0px 4px 6px #444444' }
+                  }
+                >
+                  <i className="fa-solid fa-info"></i>
                 </button>
               </li>
             </ul>

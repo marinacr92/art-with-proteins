@@ -76,6 +76,10 @@
         max-width: 600px;
         background-color: #f0aea7;
         border-radius: 0 10px 10px 0;
+
+        @media all and (max-height: 615px) {
+            overflow-y: scroll;
+        }
         
     }
 
@@ -250,29 +254,13 @@
     }
 }
 
-.button-info{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;   
-}
-
-.fa-circle-info{
-    font-size: 3rem;
-    transition: font-size 0.25s;
-    color: #FFF;
-        
-    &:hover {
-        font-size: 4rem;
-    }
-}
-
-.button-print{
+.button-print {
     border: none;
     background-color: transparent;
     cursor: pointer;
 }
 
-.fa-print{
+.fa-print {
     color: #FFF;
     font-size: 3rem;
     margin: 10px;
@@ -281,6 +269,26 @@
     &:hover {
         color: grey;
     }
+}
+
+.button-info{
+    background-color: white;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;   
+    //box-shadow: 0px 4px 6px #444444;
+
+    &:active {
+        box-shadow: inset 0px 4px 6px #444444;
+    }
+}
+
+.fa-info{
+    font-size: 2rem;
+    //transition: font-size 0.25s;
+    color: #fa8678;
 }
 
 .form{
