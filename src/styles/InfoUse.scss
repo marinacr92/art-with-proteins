@@ -2,7 +2,7 @@
     
 
     &-title{
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         font-family: 'Architects Daughter', cursive;
         color: rgb(93, 93, 93);
         
@@ -13,7 +13,11 @@
             border-radius: 8px;
             margin-bottom: 1rem;
             z-index: 2;
-            transform: translateX(25px);
+            
+
+            @media all and (min-width: 768px) {
+                transform: translateX(25px);
+            }
         }
     }
 
@@ -24,20 +28,28 @@
 
         &_container{
             background-color: #f1cbc7;
-            padding: 3rem 2rem 0.5rem 2rem;
+            padding: 0.5rem 2rem;
             border-radius: 8px;
             margin-bottom: 1rem;
-            transform: translateY(-35px);
             z-index: 0;
-            
             position: relative;
+
+            @media all and (min-width: 768px) {
+                transform: translateY(-35px);
+                padding: 3rem 2rem 0.5rem 2rem;
+            }
         }
     }
 
     &-caption{
         list-style: none;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        
+        @media all and (min-width: 768px){
+            grid-template-columns: 1fr 1fr;
+        }
+        
 
         &_container{
             background-color: white;
@@ -46,9 +58,15 @@
             min-width: 200px;
             min-height: 200px;
             padding: 10px 20px;
-            position: absolute;
-            right: -25px;
-            bottom: -30px;
+            position: relative;
+            margin: 2rem 0;
+
+            @media all and (min-width: 768px) {
+                position: absolute;
+                right: -25px;
+                bottom: -30px;
+                margin: 0 0;
+            }  
         }
 
         &_element {
@@ -77,8 +95,12 @@
 }
 
 .small-container{
-    width: 75%;
+    width: 100%;
     text-align: justify;
+
+    @media all and (min-width: 768px) {
+        width: 75%;
+    }
 }
 
 
