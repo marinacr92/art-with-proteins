@@ -51,7 +51,7 @@ const InfoUse = () => {
         <p className="info-description small-container">
           A medida que vayas haciendo cambios en el formulario, éstos aparecerán
           en la pantalla. Los colores asignados a cada aminoácido son los que
-          aparecen en la leyenda de la derecha.
+          aparecen en la leyenda.
         </p>
         <p className="info-description small-container">
           Una vez estés content@ con el resultado, presiona el botón de la
