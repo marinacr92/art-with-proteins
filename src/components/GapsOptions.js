@@ -7,14 +7,14 @@ const GapsOptions = ({ setGaps, gaps, menu }) => {
     <fieldset
       className={
         menu === true
-          ? 'form-fieldset gaps-options fieldset-appears'
-          : 'form-fieldset gaps-options fieldset-desappears'
+          ? 'form-fieldset fieldset-appears'
+          : 'form-fieldset fieldset-desappears'
       }
     >
       <legend className="form-legend">
-        <h2 className="form-legend_title">Elige la distribución</h2>
+        <h2 className="form-legend_title">Distribución</h2>
       </legend>
-      <div className="input-radio_group">
+      <div className="gaps-options">
         <input
           type="radio"
           name="gaps"

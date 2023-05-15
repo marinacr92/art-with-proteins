@@ -44,29 +44,13 @@
     }
 }
 
-.pop-up{
-    
-    &_background{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: 3;
-        background-color: #dededea8;
-        top: 0;
-    }
+// .info{
 
-    &_info {
-        width: 95%;
-        padding: 1rem 1rem 1rem 6rem;
-        display: grid;
-        justify-items: start;
+//     @media all and (min-width: 768px) {
+//         padding: 3rem 5rem 3rem 10rem;
+//     }
 
-        @media all and (min-width: 768px) {
-            padding: 3rem 5rem 3rem 10rem;
-        }
-
-        @media all and (min-width: 1024px) {
-            padding: 3rem 10rem 3rem 15rem;
-        }
-    }
-}
+//     @media all and (min-width: 1024px) {
+//         padding: 3rem 10rem 3rem 15rem;
+//     }
+// }

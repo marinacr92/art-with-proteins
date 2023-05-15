@@ -3,14 +3,14 @@ const StructureOptions = ({ selectStructure, structure, menu }) => {
     <fieldset
       className={
         menu === true
-          ? 'form-fieldset structure-options fieldset-appears'
-          : 'form-fieldset structure-options fieldset-desappears'
+          ? 'form-fieldset fieldset-appears'
+          : 'form-fieldset fieldset-desappears'
       }
     >
       <legend className="form-legend">
-        <h2 className="form-legend_title">Elige la forma</h2>
+        <h2 className="form-legend_title">Forma</h2>
       </legend>
-      <div className="input-radio_group">
+      <div className="structure-options">
         <input
           type="radio"
           name="structure"

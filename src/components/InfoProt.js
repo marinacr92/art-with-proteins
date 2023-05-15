@@ -16,7 +16,7 @@ const InfoProt = ({
       }
     >
       <legend className="form-legend">
-        <h2 className="form-legend_title">Introduce la info de la proteína</h2>
+        <h2 className="form-legend_title">Info de la proteína</h2>
       </legend>
       <label className="form-label">¿Cuál es el nombre de tu proteína?</label>
       <input

@@ -72,10 +72,25 @@ body::-webkit-scrollbar {
 
 .sidebar-form::-webkit-scrollbar-thumb {
     background-color: #f1875b;
+    border-radius: 10px;
 }
 
 .sidebar-form::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
+}
+
+.textarea::-webkit-scrollbar-track {
+    background-color: rgb(228, 228, 228);
+
+}
+
+.textarea::-webkit-scrollbar-thumb {
+    background-color: #f1875b;
+    border-radius: 10px;
+}
+
+.textarea::-webkit-scrollbar {
+    width: 5px;
 }
 
 .sidebar{
@@ -324,12 +339,13 @@ body::-webkit-scrollbar {
     flex-direction: column;
     align-items: center;
     width:100%;
+    padding-top: 1rem;
 
     &-fieldset {
         opacity:0%;
         width: 90%;
         border: none;
-        margin: 8px 0;
+        margin-bottom: 1rem;
         display: flex;
         justify-content: center;    
     }
@@ -343,14 +359,14 @@ body::-webkit-scrollbar {
 
         &_title {
             font-family: 'Dancing Script', cursive;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: rgb(0, 0, 0)
         }
     }
 
     &-label{
         font-family: 'Architects Daughter', cursive;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         color: black;
         margin: 5px 0;
 
@@ -390,10 +406,25 @@ body::-webkit-scrollbar {
     flex-direction: column;
 }
 
+.gaps-options{
+    width: 95%;
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: start;
+}
+
+.structure-options{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 30px 1fr);
+}
+
 .input-text{
-    height: 20px;
+    height: 25px;
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     border-radius: 5px;
     padding: 0 5px;
 }
@@ -402,16 +433,9 @@ body::-webkit-scrollbar {
     //height: 200px;
     height: 150px;
     width: 100%;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     border-radius: 5px;
     padding: 5px;
-}
-
-.input-radio_group {
-    width: 100%;
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(2, 30px 1fr);   
 }
 
 .input-radio {

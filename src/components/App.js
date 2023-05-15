@@ -60,7 +60,7 @@ function App() {
         <Header></Header>
         <main className="main">
           {checked === true ? (
-            <section className="pop-up_info">
+            <section className="info">
               <InfoUse></InfoUse>
             </section>
           ) : (
