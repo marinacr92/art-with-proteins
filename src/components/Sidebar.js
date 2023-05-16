@@ -13,16 +13,14 @@ const Sidebar = ({
   defaultSequence,
   proteinSequence,
   proteinName,
-  // arrayProtein,
   setGaps,
   gaps,
   selectStructure,
   structure,
   saveProtName,
   handleWriteProtein,
-  // paintProtein,
-  checked,
-  setChecked,
+  checkedInfo,
+  setCheckedInfo,
 }) => {
   const [menu, setMenu] = useState(false);
 
@@ -31,12 +29,16 @@ const Sidebar = ({
   };
 
   const handleClickInfo = () => {
-    setChecked(!checked);
+    setCheckedInfo(!checkedInfo);
   };
 
-  const print = () => {
+  const handleClickPrint = () => {
     window.print();
   };
+
+  // const print = () => {
+  //   window.print();
+  // };
 
   // return (
   //   <>
@@ -69,14 +71,21 @@ const Sidebar = ({
             <ul className="nav-content">
               <li
                 className={menu === true ? 'open menu-icon' : 'menu-icon'}
+                style={checkedInfo === true ? { display: 'none' } : {}}
                 onClick={handleClickMenu}
               >
                 <span></span>
                 <span></span>
                 <span></span>
               </li>
-              <li style={{ gridRow: '2 / 3' }}>
-                <button className="button-print" onClick={print}>
+              <li
+                style={
+                  checkedInfo === true
+                    ? { display: 'none' }
+                    : { gridRow: '2 / 3' }
+                }
+              >
+                <button className="button-print" onClick={handleClickPrint}>
                   <i className="fa-solid fa-print"></i>
                 </button>
               </li>
@@ -84,7 +93,7 @@ const Sidebar = ({
                 <button
                   className="button-info"
                   style={
-                    checked === true
+                    checkedInfo === true
                       ? { boxShadow: 'inset 0px 4px 6px #444444' }
                       : { boxShadow: '0px 4px 6px #444444' }
                   }

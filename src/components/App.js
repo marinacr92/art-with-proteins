@@ -15,16 +15,11 @@ function App() {
   const [proteinName, setProteinName] = useState('');
   const [structure, setStructure] = useState('oval');
   const [gaps, setGaps] = useState('no-gap');
-  const [checked, setChecked] = useState(false);
+  const [checkedInfo, setCheckedInfo] = useState(false);
 
   const handleWriteProtein = (ev) => {
     setProteinSequence(ev.target.value);
   };
-
-  // const paintProtein = () => {
-  //   const breakProt = proteinSequence.toLowerCase().split('');
-  //   setArrayProtein(breakProt);
-  // };
 
   const saveProtName = (ev) => {
     setProteinName(ev.target.value);
@@ -33,10 +28,6 @@ function App() {
   const selectStructure = (ev) => {
     setStructure(ev.target.value);
   };
-
-  // const selectSizeToPrint = (ev) => {
-  //   setSize(ev.target.value);
-  // };
 
   return (
     <>
@@ -49,17 +40,15 @@ function App() {
         selectStructure={selectStructure}
         saveProtName={saveProtName}
         handleWriteProtein={handleWriteProtein}
-        // paintProtein={paintProtein}
-        // arrayProtein={arrayProtein}
         structure={structure}
         gaps={gaps}
-        checked={checked}
-        setChecked={setChecked}
+        checkedInfo={checkedInfo}
+        setCheckedInfo={setCheckedInfo}
       />
       <section className="body-of-body">
         <Header></Header>
         <main className="main">
-          {checked === true ? (
+          {checkedInfo === true ? (
             <section className="info">
               <InfoUse></InfoUse>
             </section>
