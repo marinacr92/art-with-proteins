@@ -1,4 +1,4 @@
-const GapsOptions = ({ setGaps, gaps, menu }) => {
+const GapsOptions = ({ setGaps, gaps, menu, checkedInfo }) => {
   const selectGaps = (ev) => {
     setGaps(ev.target.value);
   };
@@ -10,6 +10,7 @@ const GapsOptions = ({ setGaps, gaps, menu }) => {
           ? 'form-fieldset fieldset-appears'
           : 'form-fieldset fieldset-desappears'
       }
+      style={checkedInfo === true ? { display: 'none' } : {}}
     >
       <legend className="form-legend">
         <h2 className="form-legend_title">Distribución</h2>

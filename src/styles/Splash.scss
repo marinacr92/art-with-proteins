@@ -34,7 +34,7 @@
     animation-iteration-count: 1;
 
     &-container{
-        width: 90%;
+        width: 100%;
         max-width: 620px;
         display: flex;
         align-items: center;
@@ -49,12 +49,12 @@
         color: rgb(98, 98, 98);
 
         @media all and (min-width: 768px) {
-            font-size: 90px;
+            font-size: 80px;
         }
     }
 
     &-watercolor{
         z-index: 5;
-        width: 100%;
+        width: 85%;
     }
 }

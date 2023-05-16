@@ -106,9 +106,9 @@ const Sidebar = ({
         </section>
         <section
           className={
-            menu === true
-              ? 'sidebar-form open-sidebar'
-              : 'sidebar-form close-sidebar'
+            menu === false || checkedInfo === true
+              ? 'sidebar-form close-sidebar'
+              : 'sidebar-form open-sidebar'
           }
         >
           <form
@@ -122,16 +122,19 @@ const Sidebar = ({
               proteinName={proteinName}
               saveProtName={saveProtName}
               menu={menu}
+              checkedInfo={checkedInfo}
             ></InfoProt>
             <StructureOptions
               selectStructure={selectStructure}
               structure={structure}
               menu={menu}
+              checkedInfo={checkedInfo}
             ></StructureOptions>
             <GapsOptions
               gaps={gaps}
               setGaps={setGaps}
               menu={menu}
+              checkedInfo={checkedInfo}
             ></GapsOptions>
           </form>
         </section>

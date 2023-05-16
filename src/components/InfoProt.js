@@ -6,6 +6,7 @@ const InfoProt = ({
   //paintProtein,
   proteinName,
   menu,
+  checkedInfo,
 }) => {
   return (
     <fieldset
@@ -14,6 +15,7 @@ const InfoProt = ({
           ? 'form-fieldset info-prot fieldset-appears'
           : 'form-fieldset info-prot fieldset-desappears'
       }
+      style={checkedInfo === true ? { display: 'none' } : {}}
     >
       <legend className="form-legend">
         <h2 className="form-legend_title">Info de la proteína</h2>

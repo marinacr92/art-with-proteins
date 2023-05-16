@@ -1,4 +1,9 @@
-const StructureOptions = ({ selectStructure, structure, menu }) => {
+const StructureOptions = ({
+  selectStructure,
+  structure,
+  menu,
+  checkedInfo,
+}) => {
   return (
     <fieldset
       className={
@@ -6,6 +11,7 @@ const StructureOptions = ({ selectStructure, structure, menu }) => {
           ? 'form-fieldset fieldset-appears'
           : 'form-fieldset fieldset-desappears'
       }
+      style={checkedInfo === true ? { display: 'none' } : {}}
     >
       <legend className="form-legend">
         <h2 className="form-legend_title">Forma</h2>
