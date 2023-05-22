@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import '../styles/Preview.scss';
 import '../styles/Print.scss';
 
@@ -17,20 +16,6 @@ const Protein = ({ isTriangle }) => {
 };
 
 const Preview = ({ proteinSequence, proteinName, structure, gaps }) => {
-  // const [triangleStyle, setTriangleStyle] = useState('');
-
-  // const selectTriangleStyle = () => {
-  //   if (structure === 'triangle') {
-  //     if (gaps === 'no-gap') {
-  //       return { letterSpacing: '-7px', lineHeight: '1rem' };
-  //     } else if (gaps === 'full-gap') {
-  //       return { letterSpacing: '-5px', lineHeight: '2rem' };
-  //     } else {
-  //       return { letterSpacing: '0px', lineHeight: '3.5rem' };
-  //     }
-  //   }
-  // };
-
   const arrayProtein = proteinSequence.toLowerCase().split('');
   const groupProtein = groupArr(arrayProtein, gaps === 'group-and-gap' ? 5 : 0);
   const groupAminoacid = groupProtein.map((eachArray, index) => {
@@ -44,22 +29,13 @@ const Preview = ({ proteinSequence, proteinName, structure, gaps }) => {
         <li
           key={index}
           className={`print ${structure}-structure ${eachAA} ${gaps}`}
-          // style={selectTriangleStyle()}
         >
           <Protein isTriangle={structure === 'triangle'} />
         </li>
       );
     });
     return (
-      <li
-        key={index}
-        className="group-of-aa"
-        // style={
-        //   structure === 'triangle'
-        //     ? { marginBottom: '-15px' }
-        //     : { marginBottom: '0px' }
-        // }
-      >
+      <li key={index} className="group-of-aa">
         <ul className="aa-list">{aminoacid}</ul>
       </li>
     );
