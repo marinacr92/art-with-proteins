@@ -25,7 +25,7 @@ const StructureOptions = ({
           onChange={selectStructure}
           checked={structure === 'oval'}
         />
-        <label className="form-label">Ovalada</label>
+        <label className="form-label">Óvalo</label>
         <input
           type="radio"
           name="structure"
@@ -33,7 +33,7 @@ const StructureOptions = ({
           value="sfere"
           onChange={selectStructure}
         />
-        <label className="form-label">Esfera</label>
+        <label className="form-label">Círculo</label>
         <input
           type="radio"
           name="structure"
@@ -41,7 +41,7 @@ const StructureOptions = ({
           value="square"
           onChange={selectStructure}
         />
-        <label className="form-label">Cuadrada</label>
+        <label className="form-label">Cuadrado</label>
         <input
           type="radio"
           name="structure"
@@ -49,7 +49,7 @@ const StructureOptions = ({
           value="semi-square"
           onChange={selectStructure}
         />
-        <label className="form-label">Cuadrada-redondeada</label>
+        <label className="form-label">Cuadrado redondeado</label>
         <input
           type="radio"
           name="structure"
