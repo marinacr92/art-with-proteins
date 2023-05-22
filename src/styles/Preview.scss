@@ -145,6 +145,29 @@
     }
 }
 
+.triangle-structure.group-and-gap {
+    letter-spacing: -2px;
+
+    &:nth-child(odd) {
+        transform: translate(1px, -2px) rotate(90deg);
+    }
+
+    @media all and (min-width: 768px) {
+
+        &:nth-child(odd) {
+            transform: translate(-1px, -2px) rotate(90deg);
+        }
+    }
+
+    @media all and (min-width: 1024px) {
+        letter-spacing: -4px;
+
+        &:nth-child(odd) {
+            transform: translate(-1px, -4px) rotate(90deg);
+        }
+    }
+}
+
 .no-gap {
     margin: 0;
 }
