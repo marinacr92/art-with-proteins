@@ -62,7 +62,6 @@ const Preview = ({ proteinSequence, proteinName, structure, gaps }) => {
 };
 
 const Protein = ({ isTriangle }) => {
-  console.log('isTriangle', isTriangle);
   return isTriangle ? <i className="fa-solid fa-play"></i> : <></>;
 };
 

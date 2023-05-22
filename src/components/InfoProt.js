@@ -3,7 +3,6 @@ const InfoProt = ({
   handleWriteProtein,
   proteinSequence,
   saveProtName,
-  //paintProtein,
   proteinName,
   menu,
   checkedInfo,

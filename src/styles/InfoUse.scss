@@ -1,6 +1,5 @@
 .info{
     
-
     &-title{
         font-size: 1.6rem;
         font-family: 'Architects Daughter', cursive;
@@ -64,9 +63,7 @@
             position: relative;
             margin: 2rem 0;
             
-
             @media all and (min-width: 768px) {
-                //position: absolute;
                 width: 200px;
                 min-height: 300px;
                 right: -45px;
@@ -95,27 +92,3 @@
         }
     }
 }
-
-.large-container {
-    width: 100%;
-    text-align: justify;
-}
-
-.small-container{
-    width: 100%;
-    text-align: justify;
-
-    @media all and (min-width: 768px) {
-        // display: grid;
-        // grid-template-columns: 1fr 200px;    
-    }
-}
-
-.caption-position{
-    width: 200px;
-    height: 300px;
-    position: relative;
-    background-color: antiquewhite;
-}
-
-

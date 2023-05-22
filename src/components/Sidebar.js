@@ -1,12 +1,8 @@
 import '../styles/Sidebar.scss';
 import '../styles/Print.scss';
-//import menu from '../images/menu.png';
 import { useState } from 'react';
-//import { useState } from 'react';
 import StructureOptions from './StructureOptions';
 import GapsOptions from './GapsOptions';
-//import SizeToPrint from './SizeToPrint';
-
 import InfoProt from './InfoProt';
 
 const Sidebar = ({
@@ -36,33 +32,6 @@ const Sidebar = ({
     window.print();
   };
 
-  // const print = () => {
-  //   window.print();
-  // };
-
-  // return (
-  //   <>
-  //     <section className="sidebar">
-  //       <form className="form">
-  //         <InfoProt
-  //           handleWriteProtein={handleWriteProtein}
-  //           proteinSequence={proteinSequence}
-  //           proteinName={proteinName}
-  //           saveProtName={saveProtName}
-  //         ></InfoProt>
-  //         <FormOptions selectStructure={selectStructure}></FormOptions>
-  //         <GapsOptions setGaps={setGaps}></GapsOptions>
-  //         {/* <SizeToPrint
-  //           selectSizeToPrint={selectSizeToPrint}
-  //           size={size}
-  //         ></SizeToPrint> */}
-  //       </form>
-  //       <button className="button" onClick={paintProtein}>
-  //         Frikear
-  //       </button>
-  //     </section>
-  //   </>
-  // );
   return (
     <>
       <section className="sidebar">

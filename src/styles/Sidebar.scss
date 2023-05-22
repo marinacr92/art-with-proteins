@@ -81,7 +81,6 @@ body::-webkit-scrollbar {
 
 .textarea::-webkit-scrollbar-track {
     background-color: rgb(228, 228, 228);
-
 }
 
 .textarea::-webkit-scrollbar-thumb {
@@ -105,9 +104,6 @@ body::-webkit-scrollbar {
         width: 5rem;
         background-color: #fa8678;
         min-height: 100vh;
-        //position: sticky;
-        //top: 0;
-        //left: 0;
         display: flex;
         justify-content: center;   
         z-index: 4;
@@ -115,7 +111,6 @@ body::-webkit-scrollbar {
 
     &-form{
         position: relative;
-        //width: 70%;
         max-width: 600px;
         background-color: #f0aea7;
         border-radius: 0 10px 10px 0;
@@ -131,7 +126,6 @@ body::-webkit-scrollbar {
         position: relative;
         z-index: 4;
         flex-grow: 1;
-        //width: 100%;
     }
 }
 
@@ -145,7 +139,6 @@ body::-webkit-scrollbar {
     animation-name: closeSidebar;
     animation-duration: 300ms;
     animation-fill-mode: forwards;
-    
 }
 
 .nav{
@@ -154,9 +147,6 @@ body::-webkit-scrollbar {
 
     &-content{
         width: 100%;
-        // display: flex;
-        // align-items: center;
-        // flex-direction: column;
         height: 100%;
         display: grid;
         grid-template-rows: 5rem 5rem 1fr 5rem;
@@ -169,8 +159,6 @@ body::-webkit-scrollbar {
 }
 
 .menu-icon {
-    //width: 30px;
-    //height: 25px;
     width: 3rem;
     height: 2.5rem;
     position: relative;
@@ -312,10 +300,6 @@ body::-webkit-scrollbar {
     &:hover {
         color: grey;
     }
-
-    // &:active {
-    //     color: grey;
-    // }
 }
 
 .button-info{
@@ -324,8 +308,7 @@ body::-webkit-scrollbar {
     height: 3rem;
     border: none;
     border-radius: 50%;
-    cursor: pointer;   
-    //box-shadow: 0px 4px 6px #444444;
+    cursor: pointer;
 
     &:active {
         box-shadow: inset 0px 4px 6px #444444;
@@ -334,7 +317,6 @@ body::-webkit-scrollbar {
 
 .fa-info{
     font-size: 2rem;
-    //transition: font-size 0.25s;
     color: #fa8678;
 }
 
@@ -393,19 +375,6 @@ body::-webkit-scrollbar {
     animation-fill-mode: forwards;
 }
 
-// .form-appears {
-//     animation-name: formAppears;
-//     animation-duration: 300ms;
-//     animation-fill-mode: forwards;
-//     animation-delay: 100ms
-// }
-
-// .form-desappears {
-//     animation-name: formDesappears;
-//     animation-duration: 300ms;
-//     animation-fill-mode: forwards;
-// }
-
 .info-prot{
     flex-direction: column;
 }
@@ -433,7 +402,6 @@ body::-webkit-scrollbar {
 }
 
 .textarea {
-    //height: 200px;
     height: 150px;
     width: 100%;
     font-size: 1.2rem;
@@ -450,8 +418,3 @@ body::-webkit-scrollbar {
         height: 17px;
     }
 }
-
-
-
-
-

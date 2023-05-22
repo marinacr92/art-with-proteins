@@ -2,8 +2,6 @@
     z-index:3;
     width: 100%;
     max-width: 900px;
-    // border: 2px solid #f7a399;
-    // border-radius: 10px;
     
     &-container{
         display: grid;
@@ -73,13 +71,6 @@
     }
 }
 
-// .triangle-structure{
-//     width: 0;
-//     height: 0;
-//     border-left: 20px solid white;
-//     border-right: 20px solid white;
-//     border-bottom: 30px solid transparent;
-// }
 .triangle-structure {
     background: transparent !important;
     font-size: 3rem;
@@ -228,8 +219,3 @@
         margin-left: 1rem;
     }
 }
-
-
-
-
-

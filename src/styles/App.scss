@@ -15,8 +15,7 @@
 }
 
 .body-of-body{
-    position: relative;
-    //width: 100vw;   
+    position: relative;   
     height: 100%;
     z-index: 0;
 }
@@ -24,16 +23,8 @@
 .main {
     width: 100%;
     padding: 1rem 1rem 1rem 6rem;
-    //height: 100%;
-    // position: absolute;
-    // z-index: 1;
     display: grid;
-    //align-items: center;
     justify-items: center;
-    // display: flex;
-    // justify-content: center;
-    // flex-direction: column;
-    // align-items: center;
 
     @media all and (min-width: 768px) {
         padding: 3rem 5rem 3rem 10rem;
@@ -51,8 +42,4 @@
         flex-direction: column;
         align-items: center;
     }
-
-//     @media all and (min-width: 1024px) {
-//         padding: 3rem 10rem 3rem 15rem;
-//     }
 }
