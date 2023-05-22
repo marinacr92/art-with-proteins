@@ -36,7 +36,7 @@
     }
 
     .protein-name{
-        font-size:1.8rem !important;
+        font-size: 1.8rem !important;
     }
 
     .oval-structure {
@@ -60,11 +60,28 @@
         border-radius: 0.8rem !important;
     }
 
+    .aa-list{
+        margin-left: 5px !important;
+    }
+    
     .triangle-structure {
         font-size: 4rem !important;
+        line-height: 0rem !important;
+    }
+
+    .triangle-structure.no-gap{
+        letter-spacing: -5px !important;
 
         &:nth-child(odd) {
-            transform: translateX(0.85rem) rotate(90deg) !important;
+            transform: translate(1px, -5px) rotate(90deg) !important;
+        }  
+    }
+
+    .triangle-structure.group-and-gap{
+        letter-spacing: 0px !important;
+
+        &:nth-child(odd) {
+            transform: translate(0px, 0px) rotate(90deg) !important;
         }
     }
 

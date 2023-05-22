@@ -74,13 +74,14 @@
 .triangle-structure {
     background: transparent !important;
     font-size: 3rem;
+    line-height: 0rem;
     
     &:nth-child(even) {
-        transform: rotate(270deg);
+        transform: translateX(1px) rotate(270deg);
     }
 
     &:nth-child(odd) {
-        transform: translateX(6px) rotate(90deg); //triangulos no gap translatex 0.7    
+        transform: translateX(6px) rotate(90deg);  
     }
 
     @media all and (min-width: 768px) {
@@ -96,12 +97,60 @@
     }
 }
 
+.triangle-structure.no-gap{
+    letter-spacing: -4px;
+
+    &:nth-child(odd) {
+        transform: translate(1px, -4px) rotate(90deg);
+    }
+
+    @media all and (min-width: 768px) {
+        letter-spacing: -6px;
+
+        &:nth-child(odd) {
+            transform: translate(-1px, -6px) rotate(90deg);
+        }
+    }
+    
+    @media all and (min-width: 1024px){
+        letter-spacing: -8px;
+    
+        &:nth-child(odd) {
+            transform: translate(-1.5px, -8px) rotate(90deg);
+        }
+    }   
+}
+
+.triangle-structure.full-gap {
+    letter-spacing: -2px;
+
+    &:nth-child(odd) {
+        transform: translate(1px, -2px) rotate(90deg);
+    }
+
+    @media all and (min-width: 768px) {
+        letter-spacing: -6px;
+
+        &:nth-child(odd) {
+            transform: translate(-1px, -6px) rotate(90deg);
+        }
+    }
+
+    @media all and (min-width: 1024px) {
+        letter-spacing: -8px;
+
+        &:nth-child(odd) {
+            transform: translate(-1.5px, -8px) rotate(90deg);
+        }
+    }
+}
+
 .no-gap {
-    margin: 0; //triángulos no gap -10px -1px
+    margin: 0;
 }
 
 .full-gap {
-    margin: 0.2rem; //triángulos full gap -10px 0.2rem
+    margin: 0.2rem;
 }
 
 .a{
