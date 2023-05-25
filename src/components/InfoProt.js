@@ -6,14 +6,15 @@ const InfoProt = ({
   proteinName,
   menu,
   checkedInfo,
+  checkedPrint,
 }) => {
   return (
     <fieldset
-      className={
+      className={`${
         menu === true
           ? 'form-fieldset info-prot fieldset-appears'
           : 'form-fieldset info-prot fieldset-desappears'
-      }
+      } ${checkedPrint ? 'no-animation' : ''}`}
       style={checkedInfo === true ? { display: 'none' } : {}}
     >
       <legend className="form-legend">

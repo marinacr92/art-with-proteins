@@ -3,14 +3,16 @@ const StructureOptions = ({
   structure,
   menu,
   checkedInfo,
+  checkedPrint,
 }) => {
   return (
     <fieldset
-      className={
+      className={`${
         menu === true
           ? 'form-fieldset fieldset-appears'
           : 'form-fieldset fieldset-desappears'
-      }
+      } ${checkedPrint ? 'no-animation' : ''}
+      `}
       style={checkedInfo === true ? { display: 'none' } : {}}
     >
       <legend className="form-legend">

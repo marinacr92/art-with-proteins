@@ -1,15 +1,16 @@
-const GapsOptions = ({ setGaps, gaps, menu, checkedInfo }) => {
+const GapsOptions = ({ setGaps, gaps, menu, checkedInfo, checkedPrint }) => {
   const selectGaps = (ev) => {
     setGaps(ev.target.value);
   };
 
   return (
     <fieldset
-      className={
+      className={`${
         menu === true
           ? 'form-fieldset fieldset-appears'
           : 'form-fieldset fieldset-desappears'
-      }
+      } ${checkedPrint ? 'no-animation' : ''}
+      `}
       style={checkedInfo === true ? { display: 'none' } : {}}
     >
       <legend className="form-legend">

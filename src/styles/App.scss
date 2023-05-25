@@ -43,3 +43,11 @@
         align-items: center;
     }
 }
+
+.no-animation {
+    animation: unset !important;
+}
+
+.no-display {
+    display: none !important
+}

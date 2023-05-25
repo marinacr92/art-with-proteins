@@ -3,9 +3,45 @@
         print-color-adjust: exact;
     }
 
-    .splash{
-        display: none !important;
-    }
+    // *::before {
+    //     // display: none !important;
+    //     animation: none !important;
+    //     animation-name: none !important;
+    // }
+
+    /*::before{
+        // .splash{
+        //     // display: none !important;
+        //     animation: none !important;
+        // }
+
+        .open-sidebar{
+            display: none !important;
+            animation: none !important;
+        }
+
+        .close-sidebar {
+            display: none !important;
+            animation: none !important;
+        }
+
+        .fieldset-appears {
+            display: none !important;
+            animation: none !important;
+
+        }
+
+        .fieldset-desappears {
+            display: none !important;
+            animation: none !important;
+
+        }
+    }*/
+
+    // .open-sidebar {display:none}
+    // .close-sidebar {
+    //     display: none
+    // }
 
     .header {
         display: none !important;
@@ -34,6 +70,32 @@
     .sidebar {
         display: none !important;
     }
+
+    // .open-sidebar{
+    //     animation: none !important;
+    // }
+
+    // .close-sidebar {
+    //     animation: none !important;
+    // }
+
+//     ::before {
+    
+// }
+
+//     // .fieldset-appears {
+//     //     display: none!important;
+
+//     //     ::before {
+//     //         animation: none !important;
+//     //     }
+//     // }
+//     ::before{
+//     .fieldset-desappears {
+//         display: none !important;
+//         animation: none !important;
+//     }
+// }
 
     .protein-name{
         font-size: 1.8rem !important;
@@ -88,4 +150,6 @@
     .info{
         display: none;
     }
+
+    
 }

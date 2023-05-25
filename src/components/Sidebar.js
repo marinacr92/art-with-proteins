@@ -17,6 +17,11 @@ const Sidebar = ({
   handleWriteProtein,
   checkedInfo,
   setCheckedInfo,
+  //setFirstSplash,
+  //afterPrint,
+  //beforePrint,
+  checkedPrint,
+  setCheckedPrint,
 }) => {
   const [menu, setMenu] = useState(false);
 
@@ -26,10 +31,22 @@ const Sidebar = ({
 
   const handleClickInfo = () => {
     setCheckedInfo(!checkedInfo);
+    // window.onbeforeprint = beforePrint();
   };
 
   const handleClickPrint = () => {
-    window.print();
+    //setFirstSplash(false);
+    setCheckedPrint(true);
+    window.onafterprint = () => {
+      console.log('After print');
+      setCheckedPrint(false);
+    };
+    setTimeout(() => {
+      window.print();
+    }, 300);
+    // window.print();
+
+    // window.onafterprint = afterPrint();
   };
 
   return (
@@ -74,11 +91,9 @@ const Sidebar = ({
           </nav>
         </section>
         <section
-          className={
-            menu === false || checkedInfo === true
-              ? 'sidebar-form close-sidebar'
-              : 'sidebar-form open-sidebar'
-          }
+          className={`sidebar-form ${
+            menu === false || checkedInfo === true ? 'close' : 'open'
+          }-sidebar ${checkedPrint ? 'no-animation no-display' : ''}`}
         >
           <form
             className="form"
@@ -92,18 +107,21 @@ const Sidebar = ({
               saveProtName={saveProtName}
               menu={menu}
               checkedInfo={checkedInfo}
+              checkedPrint={checkedPrint}
             ></InfoProt>
             <StructureOptions
               selectStructure={selectStructure}
               structure={structure}
               menu={menu}
               checkedInfo={checkedInfo}
+              checkedPrint={checkedPrint}
             ></StructureOptions>
             <GapsOptions
               gaps={gaps}
               setGaps={setGaps}
               menu={menu}
               checkedInfo={checkedInfo}
+              checkedPrint={checkedPrint}
             ></GapsOptions>
           </form>
         </section>

@@ -117,8 +117,7 @@ body::-webkit-scrollbar {
 
         @media all and (max-height: 615px) {
             overflow-y: scroll;
-        }
-        
+        }    
     }
 
     &-leftover{
@@ -366,7 +365,7 @@ body::-webkit-scrollbar {
     animation-name: fieldsetAppears;
     animation-duration: 300ms;
     animation-fill-mode: forwards;
-    animation-delay: 100ms
+    animation-delay: 100ms;
 }
 
 .fieldset-desappears {
