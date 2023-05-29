@@ -1,8 +1,5 @@
 # Art with Proteins
 
----
-
-\
 Primer proyecto en solitario tras finalizar el **Bootcamp de Programación Web de Adalab**. Se trata de una aplicación web con la que crear cuadros de proteínas a partir de la secuencia de aminoácidos.
 
 ## Información de la página
@@ -20,7 +17,7 @@ Además de la versión _Web_ y _Tablet_ se ha añadido una versión _Mobile_.
 
 ## Especificaciones técnicas
 
-#### Estructura
+### Estructura
 
 El proyecto se ha realizado en **React JS** y se encuentra dividido en `components`:
 
@@ -34,7 +31,7 @@ El proyecto se ha realizado en **React JS** y se encuentra dividido en `componen
   - main
     - `InfoUse` / `Preview`
 
-#### Herramientas
+### Herramientas
 
 Para la creación de la página web se ha utilizado:
 
@@ -44,7 +41,7 @@ Para la creación de la página web se ha utilizado:
 **NPM** como gestor de paquetes y dependencias (WSK)  
 **Gulp**, herramienta de automatización de tareas (WSK)
 
-#### Scripts disponibles
+### Scripts disponibles
 
 #### `npm start`
 
@@ -58,6 +55,5 @@ También puede ver los errores en la consola.
 Prepara la aplicación para **producción** y la despliega en [GitHub Pages](https://pages.github.com/).
 Borra las carpetas `build/` y `docs/` y vuelve a generar los ficheros finales.
 Una vez terminado, sube la carpeta `docs/` al repositorio de **_git_**
-\
-\
+
 **¡Muchas gracias!**
