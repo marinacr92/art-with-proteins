@@ -51,7 +51,7 @@
         list-style: none;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        justify-items: center;
+        justify-items: start;
         
         @media all and (min-width: 768px){
             grid-template-columns: 1fr 1fr;
@@ -63,8 +63,8 @@
             box-shadow: 2px 2px 2px 2px #8c8c8c;
             border-radius: 8px;
             min-width: 200px;
-            min-height: 200px;
-            padding: 10px 20px;
+            min-height: 190px;
+            padding: 10px 10px 10px 35px;
             position: relative;
             margin: 2rem 0;
             
