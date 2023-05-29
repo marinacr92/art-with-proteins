@@ -29,6 +29,8 @@ const Sidebar = ({
     setMenu(!menu);
   };
 
+  const handleClickNone = () => {};
+
   const handleClickInfo = () => {
     setCheckedInfo(!checkedInfo);
     // window.onbeforeprint = beforePrint();
@@ -92,7 +94,7 @@ const Sidebar = ({
         </section>
         <section
           className={`sidebar-form ${
-            menu === false || checkedInfo === true ? 'close' : 'open'
+            menu === false || checkedInfo === true ? 'no-animation' : 'open'
           }-sidebar ${checkedPrint ? 'no-animation no-display' : ''}`}
         >
           <form
@@ -127,7 +129,7 @@ const Sidebar = ({
         </section>
         <section
           className="sidebar-leftover"
-          onClick={menu === true ? handleClickMenu : ''}
+          onClick={menu === true ? handleClickMenu : handleClickNone}
         ></section>
       </section>
     </>

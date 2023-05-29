@@ -17,19 +17,6 @@ function App() {
   const [gaps, setGaps] = useState('no-gap');
   const [checkedInfo, setCheckedInfo] = useState(false);
   const [checkedPrint, setCheckedPrint] = useState(false);
-  //const [firstSplash, setFirstSplash] = useState(false);
-
-  // useEffect(() => {
-  //   setFirstSplash(true);
-  // }, []);
-
-  //const afterPrint = () => {
-  //setCheckedPrint(false);
-  //};
-
-  //const beforePrint = () => {
-  // setFirstSplash(true);
-  //};
 
   const handleWriteProtein = (ev) => {
     setProteinSequence(ev.target.value);
@@ -43,13 +30,8 @@ function App() {
     setStructure(ev.target.value);
   };
 
-  // useEffect(() => {
-  //   console.log('checkedPrint', false);
-  // }, [checkedPrint]);
-
   return (
     <>
-      {/* {firstSplash === true ? <Splash></Splash> : ''} */}
       <Splash />
       <Sidebar
         defaultSequence={defaultSequence}
@@ -63,24 +45,10 @@ function App() {
         gaps={gaps}
         checkedInfo={checkedInfo}
         setCheckedInfo={setCheckedInfo}
-        //setFirstSplash={setFirstSplash}
-        //afterPrint={afterPrint}
-        //beforePrint={beforePrint}
         checkedPrint={checkedPrint}
-        // setCheckedPrint={(isChecked) => {
-        //   console.log('setCheckedPrint', isChecked);
-        //   setCheckedPrint(isChecked);
-        //}}
         setCheckedPrint={setCheckedPrint}
       />
-      <section
-        className="body-of-body"
-        // style={
-        //   checkedPrint === true
-        //     ? { backgroundColor: 'black' }
-        //     : { backgroundColor: 'transparent' }
-        //}
-      >
+      <section className="body-of-body">
         <Header></Header>
         <main className="main">
           {checkedInfo === true ? (

@@ -41,7 +41,7 @@ Para la creación de la página web se ha utilizado:
 **NPM** como gestor de paquetes y dependencias (WSK)  
 **Gulp**, herramienta de automatización de tareas (WSK)
 
-### Scripts disponibles
+### _Scripts_ disponibles
 
 #### `npm start`
 
