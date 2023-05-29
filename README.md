@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Art with Proteins
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+\
+Primer proyecto en solitario tras finalizar el **Bootcamp de Programación Web de Adalab**. Se trata de una aplicación web con la que crear cuadros de proteínas a partir de la secuencia de aminoácidos.
 
-In the project directory, you can run:
+## Información de la página
 
-### `npm start`
+La web abre con el logo, que se va desvaneciendo para dar paso a la página principal. En ella podemos encontrar 3 zonas diferenciadas, el **_Header_**, con el logo de la web en la esquina superior derecha, una zona de **previsualización** de la proteína y un **_Sidebar_** a la izquierda con 3 botones:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Menú hamburguesa**. Al hacer clic sobre él se despliega el formulario que consta de 3 secciones:
+  - Información sobre la proteína, con un _input_ de tipo texto para introducir el nombre de la proteína y con un _textarea_ para la secuencia de la misma.
+  - Forma en la que se desea que se representen los aminoácidos. Podrá elegirse a través de unos _input_ de tipo radio
+  - Distribución. ¿Prefieres que los aminoácidos estén pegados, con algo de separación o distribuidos en columnas? Puedes seleccionar la opción con los _input_ de tipo radio
+- **Impresora**. Una vez se está content@ con el resultado es posible imprimir directamente el archivo o guardarlo en un documento PDF. En esta nueva ventana que se abre aparecerán las opciones de impresión propias de cada navegador.
+- **Información de uso de la página**. Pequeña descripción de las funcionalidades de la web y leyenda con los colores que corresponden a cada aminoácido.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Además de la versión _Web_ y _Tablet_ se ha añadido una versión _Mobile_.
 
-### `npm test`
+## Especificaciones técnicas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Estructura
 
-### `npm run build`
+El proyecto se ha realizado en **React JS** y se encuentra dividido en `components`:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `App`
+  - `Splash`
+  - `Sidebar`
+    - `InfoProt`
+    - `StructureOptions`
+    - `GapsOptions`
+  - `Header`
+  - main
+    - `InfoUse` / `Preview`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Herramientas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para la creación de la página web se ha utilizado:
 
-### `npm run eject`
+**HTML** y **CSS** para la maquetación  
+**SASS** como preprocesador de CSS  
+**React JS** como lenguaje de programación  
+**NPM** como gestor de paquetes y dependencias (WSK)  
+**Gulp**, herramienta de automatización de tareas (WSK)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Scripts disponibles
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### `npm start`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Ejecuta la aplicación en el **modo de desarrollo**.
+Abra [http://localhost:3000](http://localhost:3000) para verlo en su navegador.
+La página se volverá a cargar cuando realice cambios.
+También puede ver los errores en la consola.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### `npm run githubpages`
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Prepara la aplicación para **producción** y la despliega en [GitHub Pages](https://pages.github.com/).
+Borra las carpetas `build/` y `docs/` y vuelve a generar los ficheros finales.
+Una vez terminado, sube la carpeta `docs/` al repositorio de **_git_**
+\
+\
+**¡Muchas gracias!**
